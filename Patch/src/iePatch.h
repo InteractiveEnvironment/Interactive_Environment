@@ -7,21 +7,17 @@
 
 class iePatch
 {
- public:
-        iePatch(int nRings=10);
-        void draw();
+public:
+    iePatch(int nRings=10);
+    void draw();
 
-
-
- private:
-
-   int radius;
-   int centreX, centreY;
-   int nRings;
-   int marginX, marginY;
-   vector <ieRing*> rings;
-    vector <ieRing*>::iterator  itRings;
-
+private:
+    int radius;  // Radius des anzuzeigenden Kreises
+    int centreX, centreY;  // Mittelpunkt des anzuzeigenden Kreises
+    int nRings;  // Anzahl der benoetigten Ringe
+    int marginX, marginY;  // Margin-Werte für horizontalen und vertikalen Abstand on Fensterrand zu äußerster Kreislinie
+    vector <ieRing*> rings;  // Vektor als Container für alle Ringe
+    vector <ieRing*>::iterator  itRings;  // Iterator für Vektor aller Ringe
 };
 
 

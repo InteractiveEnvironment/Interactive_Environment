@@ -109,6 +109,10 @@
 			<Add after='cmd /c if not exist &quot;$(PROJECT_DIR)bin/data&quot; mkdir &quot;$(PROJECT_DIR)bin/data&quot;' />
 			<Mode after="always" />
 		</ExtraCommands>
+		<Unit filename="src\Element.cpp" />
+		<Unit filename="src\Element.h" />
+		<Unit filename="src\ieElement.cpp" />
+		<Unit filename="src\ieElement.h" />
 		<Unit filename="src\iePatch.cpp" />
 		<Unit filename="src\iePatch.h" />
 		<Unit filename="src\ieRing.cpp" />

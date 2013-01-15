@@ -4,22 +4,16 @@
 #define PADDING 5
 
 class ieRing
- {
-     public:
-     ieRing( int radiusOut, int centreX, int centreY,int color);
-     void draw();
+{
+public:
+    ieRing(int radiusOut, int centreX, int centreY, int color);
+    void draw();
 
-
-
-
-     private:
-     int radiusIn;
-     int radiusOut;
-     int centreX, centreY;
-     ofColor color;
-
-
-
+private:
+    int radiusIn;
+    int radiusOut;
+    int centreX, centreY;
+    ofColor color;
 };
 
 

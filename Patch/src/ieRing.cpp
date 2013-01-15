@@ -2,23 +2,17 @@
 
 ieRing::ieRing(int radiusOut, int centreX, int centreY,int color)
 {
-
     this->radiusIn = radiusOut-PADDING;
     this->radiusOut = radiusOut;
     this->centreX = centreX;
     this->centreY = centreY;
-    this->color.set(color,50,50);
-
-
-
-
+    this->color.set(50, color, 100);  // Definition des Farbverlaufs
 }
 
 void ieRing::draw()
 {
-    ofSetColor(50,50,50);
-    ofCircle(centreX,centreY,radiusOut);
+    ofSetColor(230, 230, 230);  // Farbdefinition der Ringzwischenraum
+    ofCircle(centreX, centreY, radiusOut);
     ofSetColor(color);
-    ofCircle(centreX,centreY,radiusIn);
-
+    ofCircle(centreX, centreY, radiusIn);
 }
