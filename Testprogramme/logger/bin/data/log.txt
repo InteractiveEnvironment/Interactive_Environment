@@ -1,0 +1,17 @@
+[14:16:26 :: NOTE :: P7testApp::setup]:         You can set different options for the log messages
+[14:16:26 :: NOTE :: P7testApp::setup]:         Options are:
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_DATE - adds date to the log
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_TIME - adds time to the log
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_CALL - adds the class & function names to the log
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_TYPE - adds the log level type to the log
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_DIFF - adds time diff between logs to the log
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_LINE - adds line numbers to the log
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_PADD - adds padding to the log
+[14:16:26 :: NOTE :: P7testApp::setup]:         LOG_USE_FILE - logs to file
+[14:16:26 :: NOTE :: P7testApp::setup]:         Default setting is: LOG_USE_TIME | LOG_USE_CALL | LOG_USE_TYPE | LOG_USE_PADD
+[14:16:26 :: NOTE :: P7testApp::setup]:         You can set one option at a time using the setLog[SomeOption] nomenclature
+[14:16:26 :: NOTE :: 18446744073705254528 :: # 42]: (<---NOISE) Time between logs can be reported in micro seconds
+[14:16:26 :: NOTE :: 0 :: # 43]:                    But as you can see the first call is always going to give you some NOISE
+[14:16:28 :: NOTE :: 2501000 :: # 47]:              ...As the time between log calls reports microsends between calls...Finsihed waiting 2500 millis or 2500000 micros
+[14:16:28 :: NOTE :: 0 :: # 49]:                    Or you can set several options at once with the setLogOptions nomenclature
+[14:16:28 :: VERB :: 0 :: # 82]:                    Attempting to close log file...data/log.txt
