@@ -1,0 +1,13 @@
+Von Sparx Systems habe ich einen 180-Tage-Schlüssel für Enterprise Architect für studentische Arbeiten erhalten.
+Das funktioniert so:
+
+Auf den Studenten PCs muss die Trial Version installiert sein.
+Sobald die 30 tägige Testperiode abgelaufen ist,
+verwenden Sie folgenden Key um die Trial-Periode von Enterprise Architect zu verlängern:
+
+	{359E-30FF-4914-8EDD-99A2}
+
+Bitte zuerst die CTRL bzw. Strg Taste halten und dann Continue Trial drücken.
+Geben Sie den Trial Key ein.
+
+Gruß, TM
