@@ -6,7 +6,7 @@
 		<Option makefile="makefile" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="addons\;src\;" />
+		<Option virtualFolders="addons\;src\;InteractiveEnvironment_V1\include\;" />
 		<Build>
 			<Target title="release">
 				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
@@ -111,15 +111,24 @@
 		</ExtraCommands>
 		<Unit filename="../Kern/include/kernInterface.h" />
 		<Unit filename="../Kern/src/kernInterface.cpp" />
+		<Unit filename="../include/patch.h">
+			<Option virtualFolder="InteractiveEnvironment_V1/include/" />
+		</Unit>
+		<Unit filename="include/block.h" />
+		<Unit filename="include/patch.h" />
+		<Unit filename="include/verbindung.h" />
+		<Unit filename="src/block.cpp" />
 		<Unit filename="src/main.cpp">
 			<Option virtualFolder="src" />
 		</Unit>
+		<Unit filename="src/patch.cpp" />
 		<Unit filename="src/testApp.cpp">
 			<Option virtualFolder="src" />
 		</Unit>
 		<Unit filename="src/testApp.h">
 			<Option virtualFolder="src" />
 		</Unit>
+		<Unit filename="src/verbindung.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
