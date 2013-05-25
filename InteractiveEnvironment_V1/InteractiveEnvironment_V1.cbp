@@ -109,15 +109,17 @@
 			<Add after='cmd /c if not exist &quot;$(PROJECT_DIR)bin/data&quot; mkdir &quot;$(PROJECT_DIR)bin/data&quot;' />
 			<Mode after="always" />
 		</ExtraCommands>
-		<Unit filename="../Kern/include/kernInterface.h" />
-		<Unit filename="../Kern/src/kernInterface.cpp" />
 		<Unit filename="../include/patch.h">
 			<Option virtualFolder="InteractiveEnvironment_V1/include/" />
 		</Unit>
-		<Unit filename="include/block.h" />
+		<Unit filename="include/Block.h" />
+		<Unit filename="include/blockInterface.h" />
+		<Unit filename="include/kernInterface.h" />
 		<Unit filename="include/patch.h" />
 		<Unit filename="include/verbindung.h" />
-		<Unit filename="src/block.cpp" />
+		<Unit filename="src/Block.cpp" />
+		<Unit filename="src/blockInterface.cpp" />
+		<Unit filename="src/kernInterface.cpp" />
 		<Unit filename="src/main.cpp">
 			<Option virtualFolder="src" />
 		</Unit>
