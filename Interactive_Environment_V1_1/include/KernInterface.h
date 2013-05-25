@@ -20,10 +20,10 @@ class kernInterface
         /** Erzeugt ein neues Objekt aus einer Blockklasse des Blocktyps
         @param typ sollte eine Konstante des enum Blocktyp sein, welches von der Klasse BlockInterface zur Verfügung gestellt wird
         @return gibt die ID des Blockelementes zurück **/
-        virtual char erstelleBlock( blocktyp typ ) = 0;
+        virtual int erstelleBlock( blocktyp typ ) = 0;
 
         /** entfernt eine Blockinstanz und zugehörige Verbindungen aus dem Programm **/
-        virtual bool loescheBlock( char blockId ) = 0;
+        virtual bool loescheBlock( int blockId ) = 0;
 
         /** Gibt Infos über einen Blocktyp zurück **/
         virtual Blockeigenschaften holeBlockinfo( Blocktyp block ) = 0;
@@ -37,7 +37,7 @@ class kernInterface
         virtual blocktyp[] holeBlockListe() = 0;
 
         /** Gibt ein Array mit den IDs der erstellten Blöcke zurück **/
-        virtual char[] holeVerwendeteBloecke() = 0;
+        virtual int[] holeVerwendeteBloecke() = 0;
 
         /** Gibt Einstellungen eines verwendeten Blockes zurück **/
         virtual blockEigenschaften holeBlockeigenschaften( blockId ) = 0;
@@ -55,11 +55,11 @@ class kernInterface
 
         /** Bestehende Verbindungen abfragen
         @return gibt alle erstellten Verbindungen im Patch zurück **/
-        virtual verbindung[] holeVerbindungen() = 0;
+        virtual Verbindung[] holeVerbindungen() = 0;
 
         /** Bestehende Verbindungen eines Blocks abfragen
         @return gibt alle erstellten Verbindungen eines Blockes zurück **/
-        virtual verbindung[] holeVerbindungen( blockId ) = 0;
+        virtual Verbindung[] holeVerbindungen( blockId ) = 0;
 
         /** Entfernt eine Verbindung
         @param verbindung **/
