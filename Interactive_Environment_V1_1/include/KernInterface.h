@@ -14,8 +14,13 @@ Es entstehen keine Abhängigkeiten zu den Benutzeroberflächen **/
 class kernInterface
 {
     public:
+        /** Erstellt alle notwendigen Klassen und macht sich Startklar **/
         KernInterface();
         virtual ~KernInterface();
+
+        /** Führt alle Rechenoperationen für einen Zyklus durch
+            Wird von openFrameworks regelmäßig aufgerufen**/
+        virtual bool update() = 0;
 
         /** Erzeugt ein neues Objekt aus einer Blockklasse des Blocktyps
         @param typ sollte eine Konstante des enum Blocktyp sein, welches von der Klasse BlockInterface zur Verfügung gestellt wird
