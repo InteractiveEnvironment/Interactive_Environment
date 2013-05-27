@@ -47,7 +47,7 @@ void testApp::draw(){
 
     img.draw(imgPos.x, imgPos.y, w,h);
     img.setAnchorPercent(0.5, 0.5);
-    img.draw(imgPos.x, imgPos.y, w,h);
+
 
 
 }
