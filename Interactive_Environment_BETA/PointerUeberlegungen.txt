@@ -1,0 +1,19 @@
+int * pointer;
+
+int a = 10;
+
+pointer = &a;
+
+int b = *pointer;
+int c = pointer;
+
+int * pointer = &a;
+
+
+Ausgang ausgang;
+Ausgang * apointer;
+pointer = &ausgang;
+
+verbinde(apointer);
+verbinde(ausgang);
+verbinde(&ausgang);
