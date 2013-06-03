@@ -111,14 +111,18 @@
 			<Add after='cmd /c if not exist &quot;$(PROJECT_DIR)bin/data&quot; mkdir &quot;$(PROJECT_DIR)bin/data&quot;' />
 			<Mode after="always" />
 		</ExtraCommands>
-		<Unit filename="include/AddiererBlock.h" />
+		<Unit filename="include/AusgabeBlock_Konsole.h" />
 		<Unit filename="include/Ausgang.h" />
 		<Unit filename="include/Block.h" />
 		<Unit filename="include/Eingang.h" />
-		<Unit filename="src/AddiererBlock.cpp" />
+		<Unit filename="include/EingangsBlock_Zufallszahl.h" />
+		<Unit filename="include/VerarbeitungsBlock_Addierer.h" />
+		<Unit filename="src/AusgabeBlock_Konsole.cpp" />
 		<Unit filename="src/Ausgang.cpp" />
 		<Unit filename="src/Block.cpp" />
 		<Unit filename="src/Eingang.cpp" />
+		<Unit filename="src/EingangsBlock_Zufallszahl.cpp" />
+		<Unit filename="src/VerarbeitungsBlock_Addierer.cpp" />
 		<Unit filename="src/main.cpp">
 			<Option virtualFolder="src" />
 		</Unit>
