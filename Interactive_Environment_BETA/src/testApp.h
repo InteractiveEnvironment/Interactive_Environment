@@ -3,7 +3,7 @@
 #include "ofMain.h"
 
 #include "Block.h"
-#include "AddiererBlock.h"
+#include "VerarbeitungsBlock_Addierer.h"
 
 class testApp : public ofBaseApp{
 

@@ -1,8 +1,6 @@
 #include "ofMain.h"
 #include "testApp.h"
 #include "ofAppGlutWindow.h"
-#include "Block.h"
-#include "AddiererBlock.h"
 
 //========================================================================
 int main( ){

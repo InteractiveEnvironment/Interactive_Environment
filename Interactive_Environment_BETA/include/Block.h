@@ -17,12 +17,15 @@ class Block
         std::vector<Ausgang *> ausgaenge;
         /** Liste aller Eingänge **/
         std::vector<Eingang *> eingaenge;
+        /** Temporär gespeicherte, generierte Wert **/
+        float generierterWert;
     private:
         /** Iteriert über die Eingangsliste um aktuelle Werte zu holen
-            Die Werte werden im zugehörigem Eingangsobjekt gespiechert **/
+            Die Werte werden im zugehörigem Eingangsobjekt gespiechert
+            @return true wenn alle Werte erfolgreich aktualisiert wurden, false wenn mindestens ein Versuch fehlgeschlagen ist **/
         bool holeWerte();
         /** Generiert einen neuen Wert aus den vorhandenen Werten in den Eingängen **/
-        bool verarbeiteWerte();
+        virtual bool verarbeiteWerte() = 0; // Virtual, da abstrakt, da von jedem Block anders implementiert
         /** Speichert den generierten Wert im Ausgang **/
         bool aktualisiereAusgang();
 };

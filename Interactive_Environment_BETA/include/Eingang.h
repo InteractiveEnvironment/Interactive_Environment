@@ -9,15 +9,15 @@ class Eingang
         Eingang();
         virtual ~Eingang();
         /** Weißt dem Eingang einen bestimmten Ausgang eines anderen Blockes zu
-        @param zuVerbindenderAusgang Die Adresse des Ausgangs der mit dem Eingang verbunden werden soll **/
-        bool verbinde(Ausgang * zuVerbindenderAusgang); //Man könnte sogar den Eingang mit dem Ausgang des selben Blockes verbinden um Schleifen zu erzeugen...
+        @param Zu Verbindender Ausgang: Die Adresse des Ausgangs der mit dem Eingang verbunden werden soll **/
+        bool verbinde(Ausgang *); //Man könnte sogar den Eingang mit dem Ausgang des selben Blockes verbinden um Schleifen zu erzeugen...
 
         /** Holt den Wert am verbundenem Ausgang ab und speichert ihn **/
         bool holeWert();
 
         /** Gibt aktuell gespeicherten Wert zurück (Getter)
         @return aktuell gespeicherter Wert  **/
-        float liefereWert();
+        float gebeWert();
 
     protected:
     private:
