@@ -17,7 +17,9 @@ bool Eingang::verbinde(Ausgang * zuVerbindenderAusgang){
 
 bool Eingang::holeWert(){
     // Wert von verbundenem Ausgang holen
+    this->wert = this->verbundenerAusgang->gebeWert();
 }
 float Eingang::gebeWert(){
+    this->holeWert();
     return this->wert;
 }

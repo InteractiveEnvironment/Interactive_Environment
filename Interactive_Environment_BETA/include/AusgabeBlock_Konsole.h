@@ -3,7 +3,7 @@
 
 #include "Block.h"
 
-class AusgabeBlock_Konsole : Block
+class AusgabeBlock_Konsole : public Block
 {
     public:
         AusgabeBlock_Konsole();

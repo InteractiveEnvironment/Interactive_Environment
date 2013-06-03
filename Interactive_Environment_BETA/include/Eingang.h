@@ -12,12 +12,12 @@ class Eingang
         @param Zu Verbindender Ausgang: Die Adresse des Ausgangs der mit dem Eingang verbunden werden soll **/
         bool verbinde(Ausgang *); //Man könnte sogar den Eingang mit dem Ausgang des selben Blockes verbinden um Schleifen zu erzeugen...
 
-        /** Holt den Wert am verbundenem Ausgang ab und speichert ihn **/
-        bool holeWert();
-
         /** Gibt aktuell gespeicherten Wert zurück (Getter)
         @return aktuell gespeicherter Wert  **/
         float gebeWert();
+
+        /** Holt den Wert am verbundenem Ausgang ab und speichert ihn **/
+        bool holeWert();
 
     protected:
     private:
@@ -30,5 +30,3 @@ class Eingang
 };
 
 #endif // EINGANG_H
-
-

@@ -3,7 +3,7 @@
 
 #include "Block.h"
 
-class VerarbeitungsBlock_Addierer : Block
+class VerarbeitungsBlock_Addierer : public Block
 {
     public:
         VerarbeitungsBlock_Addierer();

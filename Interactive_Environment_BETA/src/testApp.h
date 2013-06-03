@@ -4,6 +4,7 @@
 
 #include "Block.h"
 #include "VerarbeitungsBlock_Addierer.h"
+#include "EingangsBlock_Zufallszahl.h"
 
 class testApp : public ofBaseApp{
 
@@ -21,5 +22,8 @@ class testApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+
+    private:
+        EingangsBlock_Zufallszahl block1;
 
 };
