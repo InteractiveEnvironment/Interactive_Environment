@@ -2,10 +2,16 @@
 
 //--------------------------------------------------------------
 void testApp::setup(){
+
+    block2_Konsole.gebeEingang(0)->verbinde(block1_Zufallszahl.gebeAusgang(0)); // Verbindung zwischen Eingangsblock_Zufallszahl (alias "block1") und Ausgabeblock_Konsole (alias block2) wird aufgebaut
+                                                                                // indem der Zeiger auf den ersten Ausgang von block2 der verbinde-Methode von block1 übergeben wird
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
+
+    block1_Zufallszahl.update();    // Es werden zyklisch alle Blockobjekte aktualisiert
+    block2_Konsole.update();
 }
 
 //--------------------------------------------------------------
@@ -54,6 +60,6 @@ void testApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void testApp::dragEvent(ofDragInfo dragInfo){
 
 }

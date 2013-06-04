@@ -5,6 +5,7 @@
 #include "Block.h"
 #include "VerarbeitungsBlock_Addierer.h"
 #include "EingangsBlock_Zufallszahl.h"
+#include "Ausgabeblock_Konsole.h"
 
 class testApp : public ofBaseApp{
 
@@ -24,6 +25,6 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     private:
-        EingangsBlock_Zufallszahl block1;
-
+        EingangsBlock_Zufallszahl block1_Zufallszahl;
+        AusgabeBlock_Konsole block2_Konsole;
 };

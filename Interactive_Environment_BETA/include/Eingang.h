@@ -16,9 +16,6 @@ class Eingang
         @return aktuell gespeicherter Wert  **/
         float gebeWert();
 
-        /** Holt den Wert am verbundenem Ausgang ab und speichert ihn **/
-        bool holeWert();
-
     protected:
     private:
         /** Aktuell gespeicherte Daten **/
@@ -27,6 +24,9 @@ class Eingang
         /** Aktuell verbundener Ausgang
             Wenn == NULL ist kein Ausgang verbunden **/
         Ausgang * verbundenerAusgang; //Zeiger auf den Ausgang eines anderen Blockes
+
+        /** Holt den Wert am verbundenem Ausgang ab und speichert ihn **/
+        bool aktualisiereWert();
 };
 
 #endif // EINGANG_H
