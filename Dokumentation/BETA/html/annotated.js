@@ -4,6 +4,7 @@ var annotated =
     [ "Ausgang", "class_ausgang.html", "class_ausgang" ],
     [ "Block", "class_block.html", "class_block" ],
     [ "Eingang", "class_eingang.html", "class_eingang" ],
+    [ "EingangsBlock_Hochzaehler", "class_eingangs_block___hochzaehler.html", "class_eingangs_block___hochzaehler" ],
     [ "EingangsBlock_Zufallszahl", "class_eingangs_block___zufallszahl.html", "class_eingangs_block___zufallszahl" ],
     [ "testApp", "classtest_app.html", "classtest_app" ],
     [ "VerarbeitungsBlock_Addierer", "class_verarbeitungs_block___addierer.html", "class_verarbeitungs_block___addierer" ]

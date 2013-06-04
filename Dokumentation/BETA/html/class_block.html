@@ -118,8 +118,9 @@ Inheritance diagram for Block:</div>
   <img src="class_block.png" usemap="#Block_map" alt=""/>
   <map id="Block_map" name="Block_map">
 <area href="class_ausgabe_block___konsole.html" alt="AusgabeBlock_Konsole" shape="rect" coords="0,56,180,80"/>
-<area href="class_eingangs_block___zufallszahl.html" alt="EingangsBlock_Zufallszahl" shape="rect" coords="190,56,370,80"/>
-<area href="class_verarbeitungs_block___addierer.html" alt="VerarbeitungsBlock_Addierer" shape="rect" coords="380,56,560,80"/>
+<area href="class_eingangs_block___hochzaehler.html" alt="EingangsBlock_Hochzaehler" shape="rect" coords="190,56,370,80"/>
+<area href="class_eingangs_block___zufallszahl.html" alt="EingangsBlock_Zufallszahl" shape="rect" coords="380,56,560,80"/>
+<area href="class_verarbeitungs_block___addierer.html" alt="VerarbeitungsBlock_Addierer" shape="rect" coords="570,56,750,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -127,11 +128,13 @@ Inheritance diagram for Block:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab3407a8b1d24a61d75dd8a7937b73e84"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#ab3407a8b1d24a61d75dd8a7937b73e84">update</a> ()</td></tr>
 <tr class="separator:ab3407a8b1d24a61d75dd8a7937b73e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae875111c4c682bf4d1c9eceacc439239"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_eingang.html">Eingang</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#ae875111c4c682bf4d1c9eceacc439239">gebeEingang</a> (unsigned int)</td></tr>
+<tr class="separator:ae875111c4c682bf4d1c9eceacc439239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ad3cae8fa085328226f1ce77eac27ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ausgang.html">Ausgang</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#a8ad3cae8fa085328226f1ce77eac27ea">gebeAusgang</a> (unsigned int)</td></tr>
+<tr class="separator:a8ad3cae8fa085328226f1ce77eac27ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac64a243d4e4c3e4277e132adcf59fdea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#ac64a243d4e4c3e4277e132adcf59fdea">holeWerte</a> ()</td></tr>
-<tr class="separator:ac64a243d4e4c3e4277e132adcf59fdea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dd1a6dd51a80a0905cb516a564ca955"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#a4dd1a6dd51a80a0905cb516a564ca955">verarbeiteWerte</a> ()=0</td></tr>
 <tr class="separator:a4dd1a6dd51a80a0905cb516a564ca955"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3911c31124e1f66256c8f088b05f78a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#ac3911c31124e1f66256c8f088b05f78a">aktualisiereAusgang</a> ()</td></tr>
@@ -171,28 +174,51 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac64a243d4e4c3e4277e132adcf59fdea"></a>
+<a class="anchor" id="a8ad3cae8fa085328226f1ce77eac27ea"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Block::holeWerte </td>
+          <td class="memname"><a class="el" href="class_ausgang.html">Ausgang</a> * Block::gebeAusgang </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>ausgangNr</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Iteriert über die Eingangsliste um aktuelle Werte zu holen Die Werte werden im zugehörigem Eingangsobjekt gespiechert </p>
-<dl class="section return"><dt>Returns</dt><dd>true wenn alle Werte erfolgreich aktualisiert wurden, false wenn mindestens ein Versuch fehlgeschlagen ist </dd></dl>
+<p>Getter für Ausgänge eines Blockes </p>
+<dl class="section return"><dt>Returns</dt><dd>Liefert einen Zeiger auf den angeforderten <a class="el" href="class_ausgang.html">Ausgang</a> zurück </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Die</td><td>Nummer des Ausgangs &gt;=0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae875111c4c682bf4d1c9eceacc439239"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_eingang.html">Eingang</a> * Block::gebeEingang </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>eingangNr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Getter für Eingänge eines Blockes </p>
+<dl class="section return"><dt>Returns</dt><dd>Liefert einen Zeiger auf den angeforderten <a class="el" href="class_eingang.html">Eingang</a> zurück </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Die</td><td>Nummer des Eingangs &gt;=0 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -232,9 +258,11 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Generiert einen neuen Wert aus den vorhandenen Werten in den Eingängen </p>
+<pre class="fragment">          Iteriert über die Eingangsliste um aktuelle Werte zu holen
+</pre><p> Die Werte werden im zugehörigem Eingangsobjekt gespiechert </p>
+<dl class="section return"><dt>Returns</dt><dd>true wenn alle Werte erfolgreich aktualisiert wurden, false wenn mindestens ein Versuch fehlgeschlagen ist Generiert einen neuen Wert aus den vorhandenen Werten in den Eingängen </dd></dl>
 
-<p>Implemented in <a class="el" href="class_eingangs_block___zufallszahl.html#a2cf2846156b9c7c0fff32ab0f4dbb904">EingangsBlock_Zufallszahl</a>.</p>
+<p>Implemented in <a class="el" href="class_ausgabe_block___konsole.html#a32d7a055c6c4a42bdc551e39ed912fd9">AusgabeBlock_Konsole</a>, <a class="el" href="class_eingangs_block___zufallszahl.html#a2cf2846156b9c7c0fff32ab0f4dbb904">EingangsBlock_Zufallszahl</a>, <a class="el" href="class_verarbeitungs_block___addierer.html#a2467601bef0c007555108fa130210d50">VerarbeitungsBlock_Addierer</a>, and <a class="el" href="class_eingangs_block___hochzaehler.html#a446ef082c85ea096bf1f4ece736ee5af">EingangsBlock_Hochzaehler</a>.</p>
 
 </div>
 </div>
@@ -312,7 +340,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_block.html">Block</a></li>
-    <li class="footer">Generated on Mon Jun 3 2013 17:45:43 for Interactive Environment BETA by
+    <li class="footer">Generated on Tue Jun 4 2013 22:32:51 for Interactive Environment BETA by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.3.1 </li>
   </ul>
