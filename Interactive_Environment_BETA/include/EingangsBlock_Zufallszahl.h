@@ -2,6 +2,7 @@
 #define EINGANGSBLOCK_ZUFALLSZAHL_H
 
 #include "Block.h"
+#include "ofMath.h"
 
 class EingangsBlock_Zufallszahl : public Block
 {

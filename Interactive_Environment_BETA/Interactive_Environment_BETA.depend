@@ -18,7 +18,7 @@
 1370264886 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\ausgang.cpp
 	"Ausgang.h"
 
-1370341667 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\block.cpp
+1370344067 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\block.cpp
 	"Block.h"
 
 1370339277 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\eingang.cpp
@@ -1157,11 +1157,12 @@
 	"ofCamera.h"
 	"ofEvents.h"
 
-1370342014 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\testapp.h
+1370345273 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\testapp.h
 	"ofMain.h"
 	"Block.h"
 	"VerarbeitungsBlock_Addierer.h"
 	"EingangsBlock_Zufallszahl.h"
+	"EingangsBlock_Hochzaehler.h"
 	"Ausgabeblock_Konsole.h"
 
 1361265688 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\libs\openframeworks\app\ofappglutwindow.h
@@ -1174,25 +1175,32 @@
 	"ofPoint.h"
 	"ofTypes.h"
 
-1361265693 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\testapp.cpp
+1370345485 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\testapp.cpp
 	"testApp.h"
 
-1370341945 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\ausgabeblock_konsole.cpp
+1370344076 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\ausgabeblock_konsole.cpp
 	"AusgabeBlock_Konsole.h"
 
 1370341843 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\include\ausgabeblock_konsole.h
 	<iostream>
 	"Block.h"
 
-1370268222 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\include\verarbeitungsblock_addierer.h
+1370343956 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\include\verarbeitungsblock_addierer.h
 	"Block.h"
 
-1370261015 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\verarbeitungsblock_addierer.cpp
+1370344251 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\verarbeitungsblock_addierer.cpp
 	"VerarbeitungsBlock_Addierer.h"
 
-1370268897 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\include\eingangsblock_zufallszahl.h
+1370345422 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\include\eingangsblock_zufallszahl.h
+	"Block.h"
+	"ofMath.h"
+
+1370345375 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\eingangsblock_zufallszahl.cpp
+	"EingangsBlock_Zufallszahl.h"
+
+1370345091 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\include\eingangsblock_hochzaehler.h
 	"Block.h"
 
-1370268891 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\eingangsblock_zufallszahl.cpp
-	"EingangsBlock_Zufallszahl.h"
+1370345075 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\interactive_environment_beta\src\eingangsblock_hochzaehler.cpp
+	"EingangsBlock_Hochzaehler.h"
 

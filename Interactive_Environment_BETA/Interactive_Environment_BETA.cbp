@@ -115,12 +115,14 @@
 		<Unit filename="include/Ausgang.h" />
 		<Unit filename="include/Block.h" />
 		<Unit filename="include/Eingang.h" />
+		<Unit filename="include/EingangsBlock_Hochzaehler.h" />
 		<Unit filename="include/EingangsBlock_Zufallszahl.h" />
 		<Unit filename="include/VerarbeitungsBlock_Addierer.h" />
 		<Unit filename="src/AusgabeBlock_Konsole.cpp" />
 		<Unit filename="src/Ausgang.cpp" />
 		<Unit filename="src/Block.cpp" />
 		<Unit filename="src/Eingang.cpp" />
+		<Unit filename="src/EingangsBlock_Hochzaehler.cpp" />
 		<Unit filename="src/EingangsBlock_Zufallszahl.cpp" />
 		<Unit filename="src/VerarbeitungsBlock_Addierer.cpp" />
 		<Unit filename="src/main.cpp">

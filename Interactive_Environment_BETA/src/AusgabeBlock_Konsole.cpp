@@ -3,7 +3,6 @@
 AusgabeBlock_Konsole::AusgabeBlock_Konsole()
 {
     eingaenge.push_back(&eingang);
-    generierterWert = 0;
 }
 
 AusgabeBlock_Konsole::~AusgabeBlock_Konsole()

@@ -3,7 +3,6 @@
 EingangsBlock_Zufallszahl::EingangsBlock_Zufallszahl()
 {
     ausgaenge.push_back(&ausgang);
-    generierterWert = 0;
 }
 
 EingangsBlock_Zufallszahl::~EingangsBlock_Zufallszahl()
@@ -12,5 +11,5 @@ EingangsBlock_Zufallszahl::~EingangsBlock_Zufallszahl()
 }
 
 bool EingangsBlock_Zufallszahl::verarbeiteWerte(){
-    generierterWert++;
+    generierterWert = ofRandom(2);
 }

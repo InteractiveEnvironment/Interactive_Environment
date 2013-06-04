@@ -2,7 +2,7 @@
 
 Block::Block()
 {
-    //ctor
+    generierterWert = 0;
 }
 
 Block::~Block()
