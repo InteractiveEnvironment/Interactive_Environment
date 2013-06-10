@@ -2,8 +2,7 @@
 #include "Port.h"
 #include <typeinfo>
 
-template <typename T>
-struct PortImpl : Port
+template <typename T> struct PortImpl : Port
 {
 	/**
 	 * Typ der Daten, die über den Port verfügbar sind.

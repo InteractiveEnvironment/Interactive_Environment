@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1370868614 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\mahr20130606\mahr20130606\main.cpp
+	<cassert>
+	<iostream>
+	"AusgangImpl.h"
+	"EingangImpl.h"
+
+1370868299 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\mahr20130606\mahr20130606\ausgangimpl.h
+	"Ausgang.h"
+	"PortImpl.h"
+	<sstream>
+
+1370502362 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\mahr20130606\mahr20130606\ausgang.h
+	"Port.h"
+
+1370502566 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\mahr20130606\mahr20130606\port.h
+	<string>
+
+1370502518 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\mahr20130606\mahr20130606\portimpl.h
+	"Port.h"
+	<typeinfo>
+
+1370869410 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\mahr20130606\mahr20130606\eingangimpl.h
+	"AusgangImpl.h"
+	"Eingang.h"
+	<sstream>
+	<iostream>
+
+1370502444 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\mahr20130606\mahr20130606\eingang.h
+	"Port.h"
+

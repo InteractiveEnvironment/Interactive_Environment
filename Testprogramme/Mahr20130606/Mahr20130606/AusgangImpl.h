@@ -15,23 +15,27 @@ public:
 
 	AusgangImpl(const std::string& name) : PortImpl<T>()
 	{
+	    _name = name;
 	}
-	
+
 	void setzeDaten(T* daten)
 	{
 		_daten = daten;
 	}
 
+    /** Getter fuer Referenz auf Daten **/
     T* daten() const
     {
         return _daten;
     }
-    
+
+    /** Getter fuer Name **/
 	virtual std::string name() const
 	{
 		return _name;
-	}    
-    
+	}
+
+    /** Getter fuer Beschreibung **/
     std::string text() const
 	{
 		std::stringstream s;
