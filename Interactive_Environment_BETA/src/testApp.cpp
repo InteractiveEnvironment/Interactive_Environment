@@ -5,18 +5,18 @@ void testApp::setup(){
 
     ofSetFrameRate(2);
 
-    block_Addierer.gebeEingang(0)->verbinde(block_Zufallszahl.gebeAusgang(0));  // Verbindung zwischen Eingangsblock_Zufallszahl (alias "block1") und Ausgabeblock_Konsole (alias block2) wird aufgebaut
-    block_Addierer.gebeEingang(1)->verbinde(block_Hochzaehler.gebeAusgang(0));  // indem der Zeiger auf den ersten Ausgang von block2 der verbinde-Methode von block1 übergeben wird
-    block_Konsole.gebeEingang(0)->verbinde(block_Addierer.gebeAusgang(0));
+//    block_Addierer.gebeEingang(0)->verbinde(block_Zufallszahl.gebeAusgang(0));  // Verbindung zwischen Eingangsblock_Zufallszahl (alias "block1") und Ausgabeblock_Konsole (alias block2) wird aufgebaut
+//    block_Addierer.gebeEingang(1)->verbinde(block_Hochzaehler.gebeAusgang(0));  // indem der Zeiger auf den ersten Ausgang von block2 der verbinde-Methode von block1 übergeben wird
+//    block_Konsole.gebeEingang(0)->verbinde(block_Addierer.gebeAusgang(0));
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 
-    block_Zufallszahl.update();    // Es werden zyklisch alle Blockobjekte aktualisiert
-    block_Hochzaehler.update();
-    block_Addierer.update();
-    block_Konsole.update();
+//    block_Zufallszahl.update();    // Es werden zyklisch alle Blockobjekte aktualisiert
+//    block_Hochzaehler.update();
+//    block_Addierer.update();
+//    block_Konsole.update();
 
 }
 

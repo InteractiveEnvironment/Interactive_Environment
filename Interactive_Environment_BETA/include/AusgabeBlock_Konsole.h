@@ -13,7 +13,7 @@ class AusgabeBlock_Konsole : public Block
         bool verarbeiteWerte();
 
     private:
-        Eingang eingang;
+        Eingang<float> eingang;
 };
 
 #endif // AUSGABEBLOCK_KONSOLE_H

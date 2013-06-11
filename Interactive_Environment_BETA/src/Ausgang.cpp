@@ -3,6 +3,7 @@
 Ausgang::Ausgang()
 {
     //ctor
+    std::cout << "Template Dings: " << T << std::endl;
 }
 
 Ausgang::~Ausgang()

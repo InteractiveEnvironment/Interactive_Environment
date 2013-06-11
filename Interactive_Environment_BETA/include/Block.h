@@ -1,7 +1,10 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
+#include "Port.h"
+#include "Ausgang_Interface.h"
 #include "Ausgang.h"
+#include "Eingang_Interface.h"
 #include "Eingang.h"
 #include <vector>
 
@@ -16,19 +19,19 @@ class Block
         /** Getter für Eingänge eines Blockes
             @return Liefert einen Zeiger auf den angeforderten Eingang zurück
             @param Die Nummer des Eingangs >=0 **/
-        Eingang * gebeEingang(unsigned int);
+        Eingang_Interface * gebeEingang(unsigned int);
 
         /** Getter für Ausgänge eines Blockes
             @return Liefert einen Zeiger auf den angeforderten Ausgang zurück
             @param Die Nummer des Ausgangs >=0 **/
-        Ausgang * gebeAusgang(unsigned int);
+        Ausgang_Interface * gebeAusgang(unsigned int);
 
     protected:
         /** Liste aller Ausgänge **/
-        std::vector<Ausgang *> ausgaenge;
+        std::vector<Ausgang_Interface *> ausgaenge;
 
         /** Liste aller Eingänge **/
-        std::vector<Eingang *> eingaenge;
+        std::vector<Eingang_Interface *> eingaenge;
 
         /** Temporär gespeicherte, generierte Wert **/
         float generierterWert;

@@ -26,9 +26,9 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     private:
-        EingangsBlock_Zufallszahl block_Zufallszahl;
-        EingangsBlock_Hochzaehler block_Hochzaehler;
-        VerarbeitungsBlock_Addierer block_Addierer;
-        AusgabeBlock_Konsole block_Konsole;
+//        EingangsBlock_Zufallszahl block_Zufallszahl;
+//        EingangsBlock_Hochzaehler block_Hochzaehler;
+//        VerarbeitungsBlock_Addierer block_Addierer;
+//        AusgabeBlock_Konsole block_Konsole;
 
 };

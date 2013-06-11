@@ -10,7 +10,7 @@ Eingang::~Eingang()
     //dtor
 }
 
-bool Eingang::verbinde(Ausgang * zuVerbindenderAusgang){
+bool Eingang::verbinde(Ausgang<T> * zuVerbindenderAusgang){
     // TODO: checken, ob Ausgang != NULL ist
     this->verbundenerAusgang = zuVerbindenderAusgang;
 }
