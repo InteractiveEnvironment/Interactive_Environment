@@ -10,13 +10,13 @@ class EingangImpl : public PortImpl<T>, public Eingang
 private:
 
     const AusgangImpl<T>* ausgang;
-   	std::string _name;
+   	std::string name;
 
 public:
 
-    EingangImpl(const std::string& name) : PortImpl<T>(), ausgang(nullptr)
+    EingangImpl(const std::string& _name) : PortImpl<T>(), ausgang(nullptr)
     {
-        _name = name;
+        name = _name;
     }
 
     virtual void verbinden(const AusgangImpl<T>& ausgang)
@@ -35,6 +35,7 @@ public:
         }
     }
 
+
     virtual void trennen()
     {
 		ausgang = nullptr;
@@ -51,7 +52,7 @@ public:
     {
         if(ausgang!=nullptr)
         {
-			return ausgang->daten();
+			return ausgang->getDaten();
 		}
 		else
 		{
@@ -61,9 +62,9 @@ public:
 
 
     /** Getter fuer Name **/
-	virtual std::string name() const
+	virtual std::string getName() const
 	{
-		return _name;
+		return name;
 	}
 
     /** Getter fuer Beschreibung **/
@@ -71,14 +72,14 @@ public:
 	{
 		std::stringstream s;
 
-		s << "Eingang " << name();
+		s << "Eingang " << getName();
 		if(ausgang!=nullptr)
 		{
-			s << " empfängt Daten des Typs " << PortImpl<T>::typ.name() << " von Ausgang " << ausgang->name();
+			s << " empfaengt Daten des Typs " << PortImpl<T>::typ.name() << " von Ausgang " << ausgang->getName();
 		}
 		else
 		{
-			s << "ist nicht verbunden und kann Daten des Typs " << PortImpl<T>::typ.name() << " empfangen";
+			s << " ist nicht verbunden und kann Daten des Typs " << PortImpl<T>::typ.name() << " empfangen.";
 		}
 
 		return s.str();

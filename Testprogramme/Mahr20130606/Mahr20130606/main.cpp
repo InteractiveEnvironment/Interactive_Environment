@@ -30,15 +30,15 @@ int main()
     e3.verbinden(a3);
     cout << e3.text() << endl;
 
-    float signal1;
-    a3.setzeDaten(&signal1);
-    float* d1 = a3.daten();
-    assert(&signal1==d1);
-    float* d2 = e3.daten();
-    assert(&signal1==d2);
+//    float signal1;
+//    a3.setzeDaten(&signal1);
+//    float* d1 = a3.daten();
+//    assert(&signal1==d1);
+//    float* d2 = e3.daten();
+//    assert(&signal1==d2);
 
-    Ausgang* a4 = new AusgangImpl<Signal2>("a4");
-    Eingang* e4 = new EingangImpl<Signal2>("e4");
+    Ausgang* a4 = new AusgangImpl<int>("a4");
+    Eingang* e4 = new EingangImpl<int>("e4");
     cout << a4->text() << endl;
     cout << e4->text() << endl;
     e4->verbinden(*a4);

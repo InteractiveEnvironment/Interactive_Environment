@@ -8,38 +8,45 @@ class AusgangImpl : public PortImpl<T> , public Ausgang
 {
 private:
 
-    T* _daten;
-   	std::string _name;
+    T daten;
+    T* datenPointer;
+   	std::string name;
 
 public:
 
-	AusgangImpl(const std::string& name) : PortImpl<T>()
+	AusgangImpl(const std::string& _name) : PortImpl<T>() //Konstruktor und Elternkonstruktor
 	{
-	    _name = name;
+	    name = _name;
 	}
 
-	void setzeDaten(T* daten)
+    /** Setter fuer Datenobjekt
+      * @param Referenz auf neue Daten
+      */
+	void setzeDaten(T* _daten)
 	{
-		_daten = daten;
+		daten = *_daten;
+		datenPointer = &daten;
 	}
 
-    /** Getter fuer Referenz auf Daten **/
-    T* daten() const
+    /** Getter fuer Referenz auf Daten
+      * @return Referenz auf eigenes Datenobjekt
+      */
+    T* getDaten() const
     {
-        return _daten;
+        return datenPointer;
     }
 
     /** Getter fuer Name **/
-	virtual std::string name() const
+	virtual std::string getName() const
 	{
-		return _name;
+		return name;
 	}
 
     /** Getter fuer Beschreibung **/
     std::string text() const
 	{
 		std::stringstream s;
-		s << "Ausgang " << name() << " liefert Daten des Typs " << PortImpl<T>::typ.name();
+		s << "Ausgang " << getName() << " liefert Daten des Typs " << PortImpl<T>::typ.name();
 		return s.str();
 	}
 };
