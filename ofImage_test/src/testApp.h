@@ -19,8 +19,16 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+        int IMAGE_HEIGHT;
+        int IMAGE_WIDTH;
+
 		ofVideoGrabber vidGrabber;
 		ofImage image;
-
-
+		ofImage bwImage;
+		ofImage backgroundShot;
+		ofImage substractedImage;
+		ofImage binaryImage;
+		ofImage bluredImage;
+		ofImage newBackground;
+		ofImage finalImage;
 };
