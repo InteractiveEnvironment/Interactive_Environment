@@ -44,7 +44,7 @@ public:
 		}
 	}
 
-	virtual void naechsterSchritt() = 0;
+	virtual void update() = 0;
 
 	const vector<Eingang*> eingaenge() const
 	{
