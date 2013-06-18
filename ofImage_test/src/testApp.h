@@ -25,6 +25,7 @@ class testApp : public ofBaseApp{
 		ofVideoGrabber vidGrabber;
 		ofImage image;
 		ofImage bwImage;
+		ofImage bwBinaryImage;
 		ofImage backgroundShot;
 		ofImage substractedImage;
 		ofImage binaryImage;

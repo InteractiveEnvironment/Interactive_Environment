@@ -2308,3 +2308,20 @@
 1367949700 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\oftestrep\fb_backgroundsubstraction\src\testapp.cpp
 	"testApp.h"
 
+1367951032 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\bachfa\fb_backgroundsubstraction\src\backgroundsubst.cpp
+	"../include/BackgroundSubst.h"
+
+1367950718 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\bachfa\fb_backgroundsubstraction\include\backgroundsubst.h
+	"ofMain.h"
+
+1367159394 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\bachfa\fb_backgroundsubstraction\src\main.cpp
+	"testApp.h"
+	"ofAppGlutWindow.h"
+
+1367182989 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\bachfa\fb_backgroundsubstraction\src\testapp.h
+	"ofMain.h"
+	"../include/BackgroundSubst.h"
+
+1367949700 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\testprogramme\bachfa\fb_backgroundsubstraction\src\testapp.cpp
+	"testApp.h"
+
