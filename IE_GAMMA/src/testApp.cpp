@@ -5,24 +5,30 @@
 //--------------------------------------------------------------
 void testApp::setup(){
 
+    ofSetFrameRate(25);
+
+    KameraBlock = new Eingangsblock_Kamera("KameraBlock");
+    BildBlock = new Ausgabeblock_Bild("Bildblock");
+
 	const vector<Ausgang*> KameraBlockAusgaenge = KameraBlock->ausgaenge();
 	const vector<Eingang*> BildBlockEingaenge = BildBlock->eingaenge();
 
 	BildBlockEingaenge[Ausgabeblock_Bild::IMAGE]->verbinden(*KameraBlockAusgaenge[Eingangsblock_Kamera::IMAGE]);
 
-	cout << KameraBlock->text() << BildBlock->text();
+	std::cout << KameraBlock->text() << BildBlock->text() << std::endl;
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 
+//    std::cout << "U P D A T E" << std::endl;
     KameraBlock->update();
-    BildBlock->update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-
+//    std::cout << "D R A W" << std::endl;
+    BildBlock->update();
 }
 
 //--------------------------------------------------------------

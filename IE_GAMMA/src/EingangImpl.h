@@ -17,7 +17,7 @@ public:
     {
 		_name = name;
     }
-    
+
 	virtual bool istKompatibel(const Ausgang& ausgang) const
 	{
         const AusgangImpl<T>* a = dynamic_cast<const AusgangImpl<T>* > (&ausgang);
@@ -62,6 +62,7 @@ public:
 		}
 		else
 		{
+		    std::cout << "Ausgang ist nullpointer" << std::endl;
 			return nullptr;
 		}
     }

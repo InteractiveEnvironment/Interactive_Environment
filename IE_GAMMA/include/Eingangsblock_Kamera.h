@@ -8,14 +8,15 @@ class Eingangsblock_Kamera : public Block
 {
     public:
         Eingangsblock_Kamera();
-        virtual ~Eingangsblock_Kamera();
+//        virtual ~Eingangsblock_Kamera();
 
         enum Typ {IMAGE};
 
         Eingangsblock_Kamera(const string& name) : Block(name)
         {
             a1 = new AusgangImpl<ofImage>("a1");
-            ausgangHinzufuegen(a1);
+            this->ausgangHinzufuegen(a1);
+
 
             int IMAGE_HEIGHT = 240;
             int IMAGE_WIDTH = 320;
@@ -31,7 +32,6 @@ class Eingangsblock_Kamera : public Block
             if (vidGrabber.isFrameNew()){
                 unsigned char *pixels = vidGrabber.getPixels();
                 image.setFromPixels(pixels,image.getWidth(),image.getHeight(),OF_IMAGE_COLOR);
-
                 a1->setzeDaten(&image);
             }
         }
