@@ -1,5 +1,6 @@
 #ifndef EINGANGSBLOCK_KAMERA_H
 #define EINGANGSBLOCK_KAMERA_H
+
 #include "Block.h"
 #include "AusgangImpl.h"
 
@@ -8,7 +9,6 @@ class Eingangsblock_Kamera : public Block
 {
     public:
         Eingangsblock_Kamera();
-//        virtual ~Eingangsblock_Kamera();
 
         enum Typ {IMAGE};
 
@@ -36,6 +36,13 @@ class Eingangsblock_Kamera : public Block
             }
         }
 
+        void draw(){
+            // nothing to do here
+        }
+
+        void trigger(){
+            // nothing to do here
+        }
 
     protected:
     private:

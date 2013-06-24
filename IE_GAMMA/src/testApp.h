@@ -5,6 +5,11 @@
 #include "Eingang.h"
 
 #include "Eingangsblock_Kamera.h"
+#include "Eingangsblock_Bild.h"
+#include "Verarbeitungsblock_Schnappschuss.h"
+#include "Verarbeitungsblock_Bildsubstraktion.h"
+#include "Verarbeitungsblock_Binarisierung.h"
+#include "Verarbeitungsblock_Hintergrundersetzer.h"
 #include "Ausgabeblock_Bild.h"
 
 class testApp : public ofBaseApp{
@@ -25,6 +30,13 @@ class testApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		Eingangsblock_Kamera * KameraBlock;
+		Eingangsblock_Bild * HintergrundBlock;
+		Verarbeitungsblock_Schnappschuss * SchnappschussBlock;
+		Verarbeitungsblock_Bildsubstraktion * BildsubstraktorBlock;
+		Verarbeitungsblock_Binarisierung * BinarisierungsBlock;
+		Verarbeitungsblock_Hintergrundersetzer * HintergrundersetzerBlock;
 		Ausgabeblock_Bild* BildBlock;
+		Ausgabeblock_Bild* BildBlock_2;
+		Ausgabeblock_Bild* BildBlock_3;
 
 };

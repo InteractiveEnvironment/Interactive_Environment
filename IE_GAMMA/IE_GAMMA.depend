@@ -1132,11 +1132,16 @@
 	"ofCamera.h"
 	"ofEvents.h"
 
-1371761770 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.h
+1372080831 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.h
 	"ofMain.h"
 	"Ausgang.h"
 	"Eingang.h"
 	"Eingangsblock_Kamera.h"
+	"Eingangsblock_Bild.h"
+	"Verarbeitungsblock_Schnappschuss.h"
+	"Verarbeitungsblock_Bildsubstraktion.h"
+	"Verarbeitungsblock_Binarisierung.h"
+	"Verarbeitungsblock_Hintergrundersetzer.h"
 	"Ausgabeblock_Bild.h"
 
 1361265688 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\libs\openframeworks\app\ofappglutwindow.h
@@ -1158,15 +1163,15 @@
 1371070132 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\eingang.h
 	"Port.h"
 
-1371760886 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\eingangsblock_kamera.h
+1372073451 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\eingangsblock_kamera.h
 	"Block.h"
 	"AusgangImpl.h"
 
-1371761735 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\ausgabeblock_bild.h
+1372078489 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\ausgabeblock_bild.h
 	"Block.h"
 	"EingangImpl.h"
 
-1371557441 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\block.h
+1372072657 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\block.h
 	<vector>
 	"Ausgang.h"
 	"Eingang.h"
@@ -1188,6 +1193,28 @@
 	"AusgangImpl.h"
 	<sstream>
 
-1371759862 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.cpp
+1372081248 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.cpp
 	"testApp.h"
+
+1372080351 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\eingangsblock_bild.h
+	<Block.h>
+	"AusgangImpl.h"
+
+1372078679 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_schnappschuss.h
+	<Block.h>
+	"EingangImpl.h"
+	"AusgangImpl.h"
+
+1372078950 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_bildsubstraktion.h
+	<Block.h>
+	"EingangImpl.h"
+	"AusgangImpl.h"
+
+1372079866 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_binarisierung.h
+	<Block.h>
+
+1372082256 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_hintergrundersetzer.h
+	<Block.h>
+	"EingangImpl.h"
+	"AusgangImpl.h"
 

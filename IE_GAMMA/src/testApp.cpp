@@ -8,32 +8,63 @@ void testApp::setup(){
     ofSetFrameRate(25);
 
     KameraBlock = new Eingangsblock_Kamera("KameraBlock");
-    BildBlock = new Ausgabeblock_Bild("Bildblock");
+    HintergrundBlock = new Eingangsblock_Bild("HintergrundBlock");
 
-	const vector<Ausgang*> KameraBlockAusgaenge = KameraBlock->ausgaenge();
-	const vector<Eingang*> BildBlockEingaenge = BildBlock->eingaenge();
+    SchnappschussBlock = new Verarbeitungsblock_Schnappschuss("SchnappschussBlock");
+    BildsubstraktorBlock = new Verarbeitungsblock_Bildsubstraktion("BildsubstraktorBlock");
+    BinarisierungsBlock = new Verarbeitungsblock_Binarisierung("BinarisierungsBlock");
+    HintergrundersetzerBlock = new Verarbeitungsblock_Hintergrundersetzer("HintergrundersetzerBlock");
 
-	BildBlockEingaenge[Ausgabeblock_Bild::IMAGE]->verbinden(*KameraBlockAusgaenge[Eingangsblock_Kamera::IMAGE]);
+    BildBlock = new Ausgabeblock_Bild("Bildblock", 20, 20);
 
-	std::cout << KameraBlock->text() << BildBlock->text() << std::endl;
+//  ALTERNATIVE METHODE:
+//	const vector<Ausgang*> KameraBlockAusgaenge = KameraBlock->ausgaenge();
+//	const vector<Eingang*> BildBlockEingaenge = BildBlock->eingaenge();
+//	BildBlockEingaenge[Ausgabeblock_Bild::IMAGE]->verbinden(*KameraBlockAusgaenge[Eingangsblock_Kamera::IMAGE]);
+
+    std::cout << "Verbindungen werden erstellt" << std::endl;
+    SchnappschussBlock->eingaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::BACKGROUND_IMAGE]->verbinden(*SchnappschussBlock->ausgaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]);
+    BinarisierungsBlock->eingaenge()[Verarbeitungsblock_Binarisierung::IMAGE]->verbinden(*BildsubstraktorBlock->ausgaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]);
+
+    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::MASKEN_IMAGE]->verbinden(*BinarisierungsBlock->ausgaenge()[Verarbeitungsblock_Binarisierung::IMAGE]);
+    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::BACKGROUND_IMAGE]->verbinden(*HintergrundBlock->ausgaenge()[Eingangsblock_Bild::IMAGE]);
+
+	BildBlock->eingaenge()[Ausgabeblock_Bild::IMAGE]->verbinden(*HintergrundersetzerBlock->ausgaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]);
+	std::cout << "Alle Verbindungen wurden erstellt" << std::endl;
+
+//	std::cout << KameraBlock->text() << BildBlock->text() << std::endl;
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 
-//    std::cout << "U P D A T E" << std::endl;
     KameraBlock->update();
+    SchnappschussBlock->update();
+    BildsubstraktorBlock->update();
+    BinarisierungsBlock->update();
+    HintergrundersetzerBlock->update();
+    BildBlock->update();
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-//    std::cout << "D R A W" << std::endl;
-    BildBlock->update();
+
+    BildBlock->draw();
 }
 
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 
+    switch (key){
+        case ' ':
+            SchnappschussBlock->trigger();
+            break;
+    }
+
+    std::cout << "KeyPressed: " << key << std::endl;
 }
 
 //--------------------------------------------------------------
