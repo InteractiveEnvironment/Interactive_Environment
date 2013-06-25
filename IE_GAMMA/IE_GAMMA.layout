@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="release" />
+	<File name="include\Ausgabeblock_Bild.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1070" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="include\Eingangsblock_Bild.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1468" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="include\Eingangsblock_Kamera.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="640" topLine="22" />
+		</Cursor>
+	</File>
+	<File name="include\Verarbeitungsblock_Bildsubstraktion.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1810" topLine="39" />
+		</Cursor>
+	</File>
 	<File name="include\Verarbeitungsblock_Binarisierung.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1381" topLine="31" />
+			<Cursor1 position="1381" topLine="24" />
 		</Cursor>
 	</File>
 	<File name="include\Verarbeitungsblock_Hintergrundersetzer.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
@@ -14,21 +34,6 @@
 	<File name="include\Verarbeitungsblock_Schnappschuss.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="959" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="include\Ausgabeblock_Bild.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1070" topLine="18" />
-		</Cursor>
-	</File>
-	<File name="include\Eingangsblock_Bild.h" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1468" topLine="40" />
-		</Cursor>
-	</File>
-	<File name="include\Eingangsblock_Kamera.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1106" topLine="20" />
 		</Cursor>
 	</File>
 	<File name="src\Ausgang.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -71,19 +76,14 @@
 			<Cursor1 position="413" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\testApp.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+	<File name="src\testApp.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1805" topLine="33" />
+			<Cursor1 position="1635" topLine="51" />
 		</Cursor>
 	</File>
 	<File name="src\testApp.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="814" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Verarbeitungsblock_Bildsubstraktion.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1810" topLine="39" />
+			<Cursor1 position="814" topLine="4" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

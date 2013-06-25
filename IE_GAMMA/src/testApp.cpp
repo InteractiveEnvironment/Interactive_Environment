@@ -60,6 +60,11 @@ void testApp::keyPressed(int key){
         case 356:
         case 358:
             HintergrundBlock->trigger(key);
+            break;
+        case 'v':
+        case 'V':
+            KameraBlock->trigger(key);
+            break;
         default:
             std::cout << "KeyPressed: " << key << std::endl;
     }

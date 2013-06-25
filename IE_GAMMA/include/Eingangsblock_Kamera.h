@@ -41,7 +41,7 @@ class Eingangsblock_Kamera : public Block
         }
 
         void trigger(int key = 0){
-            // nothing to do here
+            vidGrabber.videoSettings();
         }
 
     protected:
