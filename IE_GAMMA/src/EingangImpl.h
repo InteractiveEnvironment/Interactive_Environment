@@ -3,43 +3,80 @@
 #include "AusgangImpl.h"
 #include <sstream>
 
+/**
+ * Jeder konkrete Eingang kann nur genau einen Datentyp empfangen.
+ * @tparam Datentyp, welcher vom Eingang empfangen werden kann.
+ */
 template <typename T>
 class EingangImpl : public PortImpl<T>, public Eingang
 {
 private:
-
+    /**
+     * Jeder Eingang kennt einen Ausgang, mit welchem er verbunden ist.
+     * Gibt es keine Verbindung, ist der Ausgang ein Nullpointer.
+     */
     AusgangImpl<T>* ausgang;
+
+    /** Name des Eingangs */
    	std::string _name;
 
 public:
 
-    EingangImpl(const std::string& name) : PortImpl<T>(), ausgang(nullptr)
+    EingangImpl(const std::string& name) : PortImpl<T>()
     {
 		_name = name;
+		ausgang = nullptr;
     }
 
+    //TODO: Destructor
+
+    /**
+     * Überprüft, ob ein Ausgang mit diesem Eingang kompatibel ist, also den gleichen Datentyp bereitstellt
+     * @param Ausgang
+     * @return true, wenn kompatibel
+     */
 	virtual bool istKompatibel(const Ausgang& ausgang) const
 	{
+	    // dynamic_cast gibt nullptr zurück, wenn sich Objekt nicht casten lässt
         const AusgangImpl<T>* a = dynamic_cast<const AusgangImpl<T>* > (&ausgang);
         return (a!=nullptr);
 	}
 
-    virtual void verbinden(AusgangImpl<T>& ausgang)
+    /**
+     * Speichert den Ausgang um später dessen Daten zu holen
+     * Ruft verbinden() in diesem Ausgang auf
+     * Diese Funktion wird aufgerufen, wenn der Ausgang mit diesem Eingang kompatibel ist
+     * @param AusgangImpl, der mit diesem Eingang verbunden werden soll
+     *
+     */
+    virtual void verbinden(AusgangImpl<T>& _ausgang)
     {
-        this->ausgang = &ausgang;
-        ausgang.verbinden(this);
+        this->ausgang = &_ausgang;
+        _ausgang.verbinden(this);
     }
 
-    virtual void verbinden(Ausgang& ausgang)
+    /**
+     * Speichert den Ausgang um später dessen Daten zu holen
+     * Ruft verbinden() in diesem Ausgang auf
+     * Diese Funktion wird aufgerufen, wenn unklar ist, ob der Ausgang mit diesem Eingang kompatibel ist
+     * @param Ausgang, der mit diesem Eingang verbunden werden soll
+     */
+    virtual void verbinden(Ausgang& _ausgang)
     {
-        AusgangImpl<T>* a = dynamic_cast<AusgangImpl<T>* > (&ausgang);
+        //TODO: Überprüfung durch istKompatibel() ersetzen!
+        AusgangImpl<T>* a = dynamic_cast<AusgangImpl<T>* > (&_ausgang);
         if(a!=nullptr)
         {
+            //TODO: Folgenden Code durch verbinden() ersetzen
             this->ausgang = a;
             a->verbinden(this);
         }
     }
 
+    /**
+     * Ruft beim Ausgang trennen() auf
+     * Setzt den verbundenen Ausgang auf einen Nullpointer
+     */
     virtual void trennen()
     {
         if(ausgang!=nullptr)
@@ -48,12 +85,19 @@ public:
             ausgang = nullptr;
         }
 	}
-
+    /**
+     * Überprüft, ob dieser Eingang bereits mit einem Ausgang verbunden ist
+     * @return true, wenn eine Verbindung besteht
+     */
 	virtual bool istVerbunden() const
 	{
 		return ausgang!=nullptr;
 	}
 
+    /**
+     * Der Eingang holt die Daten aus dem verbundenem Ausgang ab und stellt sie selbst bereit
+     * @return Zeiger auf die Daten im verbundenem Ausgang, wenn nicht verbunden dann Nullpointer
+     */
 	T* daten() const
     {
         if(ausgang!=nullptr)

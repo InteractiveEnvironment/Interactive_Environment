@@ -1,7 +1,10 @@
 #pragma once
 #include "Port.h"
-class Ausgang;
+class Ausgang; //Funktioniert, ist ein workaround
 
+/**
+ * Interface für die EingangsImpl-Klasse
+ */
 struct Eingang : Port
 {
 	/**
@@ -10,7 +13,7 @@ struct Eingang : Port
 	 * @return true, falls der Eingang mit dem Ausgang verbunden werden kann.
 	 */
 	virtual bool istKompatibel(const Ausgang& ausgang) const = 0;
-	
+
 	/**
 	 * Verbindet den Eingang mit einem Ausgang.
 	 * @param ausgang Ausgang

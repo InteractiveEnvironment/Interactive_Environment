@@ -9,10 +9,14 @@ class Verarbeitungsblock_Hintergrundersetzer : public Block
 {
     public:
         Verarbeitungsblock_Hintergrundersetzer();
+        //Enum Bezeichnungen werden in der gleichen Reihenfolge definiert,
+        // wie die Eingänge in den Vector gespeichert werden
         enum Typ {IMAGE, BACKGROUND_IMAGE, MASKEN_IMAGE};
 
         Verarbeitungsblock_Hintergrundersetzer(const string& name) : Block(name)
         {
+            //Ein- und Ausgänge eines konkreten Datentyps werden definiert
+            // und im entsprechendem Vector gespeichert (Reihenfolge beachten, siehe Enum weiter oben)
             e1 = new EingangImpl<ofImage>("e1");
             this->eingangHinzufuegen(e1);
             e2_Background = new EingangImpl<ofImage>("e2");
@@ -23,20 +27,27 @@ class Verarbeitungsblock_Hintergrundersetzer : public Block
             a1 = new AusgangImpl<ofImage>("a1");
             this->ausgangHinzufuegen(a1);
 
-
+            //TODO: Dynamisch Größe anpassen
             int IMAGE_HEIGHT = 240;
             int IMAGE_WIDTH = 320;
 
+            //jedes konkrete ofImage muss mit allocate Speicher reservieren, bevor es verwendet werden kann
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
+            //Die Adresse des Bildes (bzw. der Daten) wird dem Ausgang übergeben
             a1->setzeDaten(&image);
+
+            //Kein Destruktor,
+            // oder Destruktor, welcher Elterndestruktor aufruft
         }
 
         void update()
         {
+            //Aktuelle Daten werden aus den Eingängen geholt
             image_e1 = e1->daten();
             image_e2_Background = e2_Background->daten();
             image_e3_Maske = e3_Maske->daten();
 
+            //Die Maske wird verwendet um entweder das eine oder das andere Bild einzublenden
             if((e1->daten()!=nullptr) && (e2_Background->daten()!=nullptr) && (e3_Maske->daten() != nullptr)){
                 for(int s=0, b=0; s<image.getPixelsRef().size(); s+=3, b++){
                     if(image_e3_Maske->getPixelsRef()[s] > 0

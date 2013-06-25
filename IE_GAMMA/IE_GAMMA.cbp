@@ -114,7 +114,12 @@
 			<Mode after="always" />
 		</ExtraCommands>
 		<Unit filename="include/Ausgabeblock_Bild.h" />
+		<Unit filename="include/Eingangsblock_Bild.h" />
 		<Unit filename="include/Eingangsblock_Kamera.h" />
+		<Unit filename="include/Verarbeitungsblock_Bildsubstraktion.h" />
+		<Unit filename="include/Verarbeitungsblock_Binarisierung.h" />
+		<Unit filename="include/Verarbeitungsblock_Hintergrundersetzer.h" />
+		<Unit filename="include/Verarbeitungsblock_Schnappschuss.h" />
 		<Unit filename="src/Ausgang.h" />
 		<Unit filename="src/AusgangImpl.h" />
 		<Unit filename="src/Block.h" />

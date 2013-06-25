@@ -25,14 +25,10 @@ class Ausgabeblock_Bild : public Block
 
             int IMAGE_HEIGHT = 240;
             int IMAGE_WIDTH = 320;
-
-            image = new ofImage;
-//            image->allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
         }
 
         void update()
         {
-//            std::cout << this->name() << ": update()" << std::endl;
             image = e1->daten();
             if(image!=nullptr)
             {
