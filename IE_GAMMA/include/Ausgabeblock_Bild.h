@@ -46,7 +46,7 @@ class Ausgabeblock_Bild : public Block
                 image->draw(xPos, yPos);
             }
         }
-        void trigger()
+        void trigger(int key = 0)
         {
             // nothing to do here
         }

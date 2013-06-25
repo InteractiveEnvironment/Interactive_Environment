@@ -50,7 +50,7 @@ class Verarbeitungsblock_Bildsubstraktion : public Block
             //nothing to do here
         }
 
-        void trigger()
+        void trigger(int key = 0)
         {
             //nothing to do here
         }

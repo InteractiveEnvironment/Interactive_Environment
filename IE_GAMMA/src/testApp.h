@@ -29,6 +29,11 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+		void verbinden_0();
+		void verbinden_1();
+		void verbinden_2();
+		void verbinden_3();
+
 		Eingangsblock_Kamera * KameraBlock;
 		Eingangsblock_Bild * HintergrundBlock;
 		Verarbeitungsblock_Schnappschuss * SchnappschussBlock;

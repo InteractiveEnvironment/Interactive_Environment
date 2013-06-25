@@ -20,25 +20,40 @@ class Verarbeitungsblock_Binarisierung : public Block
             int IMAGE_HEIGHT = 240;
             int IMAGE_WIDTH = 320;
 
+            schwellwert = 35;
+
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
             a1->setzeDaten(&image);
         }
 
         void update()
         {
-            image = *(e1->daten());
-
-            for(int s=0; s<image.getPixelsRef().size(); s++){
-                image.getPixelsRef()[s] = image.getPixelsRef()[s] > 35 ? 255 : 0;
+            if(e1->daten()!=nullptr){
+                image = *(e1->daten());
+                for(int s=0; s<image.getPixelsRef().size(); s++){
+                    image.getPixelsRef()[s] = image.getPixelsRef()[s] > schwellwert ? 255 : 0;
+                }
             }
         }
         void draw()
         {
             //nothing to do here
         }
-        void trigger()
+        void trigger(int key)
         {
-
+            switch (key){
+            case 357:
+                if(schwellwert<255){
+                    schwellwert++;
+                }
+                break;
+            case 359:
+                if(schwellwert>0){
+                    schwellwert--;
+                }
+                break;
+            }
+            std::cout << this->name() << " Schwellwert: "<< schwellwert << std::endl;
         }
 
     protected:
@@ -46,6 +61,7 @@ class Verarbeitungsblock_Binarisierung : public Block
         EingangImpl<ofImage>* e1;
         AusgangImpl<ofImage>* a1;
         ofImage image;
+        int schwellwert;
 };
 
 #endif // VERARBEITUNGSBLOCK_BINARISIERUNG_H

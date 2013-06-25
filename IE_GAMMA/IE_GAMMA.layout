@@ -1,84 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="release" />
-	<File name="src\main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Verarbeitungsblock_Binarisierung.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\testApp.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2902" topLine="30" />
-		</Cursor>
-	</File>
-	<File name="src\testApp.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="741" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Verarbeitungsblock_Bildsubstraktion.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1394" topLine="24" />
+			<Cursor1 position="1381" topLine="31" />
 		</Cursor>
 	</File>
 	<File name="include\Verarbeitungsblock_Hintergrundersetzer.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1301" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Ausgabeblock_Bild.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="579" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="include\Eingangsblock_Bild.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="622" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="include\Eingangsblock_Kamera.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="64" topLine="0" />
+			<Cursor1 position="2973" topLine="53" />
 		</Cursor>
 	</File>
 	<File name="include\Verarbeitungsblock_Schnappschuss.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="282" topLine="5" />
+			<Cursor1 position="959" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="src\Ausgang.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Ausgabeblock_Bild.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1070" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="include\Eingangsblock_Bild.h" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1468" topLine="40" />
+		</Cursor>
+	</File>
+	<File name="include\Eingangsblock_Kamera.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1106" topLine="20" />
+		</Cursor>
+	</File>
+	<File name="src\Ausgang.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="132" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\AusgangImpl.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+	<File name="src\AusgangImpl.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1069" topLine="24" />
+			<Cursor1 position="1556" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Block.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+	<File name="src\Block.h" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2796" topLine="0" />
+			<Cursor1 position="2097" topLine="60" />
 		</Cursor>
 	</File>
-	<File name="src\Eingang.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+	<File name="src\Eingang.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="541" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\EingangImpl.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+	<File name="src\EingangImpl.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="693" topLine="12" />
+			<Cursor1 position="3043" topLine="87" />
 		</Cursor>
 	</File>
-	<File name="src\Port.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
+	<File name="src\Port.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="7" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="269" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\PortImpl.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+	<File name="src\PortImpl.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="456" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="413" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\testApp.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1805" topLine="33" />
+		</Cursor>
+	</File>
+	<File name="src\testApp.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="814" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Verarbeitungsblock_Bildsubstraktion.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1810" topLine="39" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

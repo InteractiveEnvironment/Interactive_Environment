@@ -82,8 +82,9 @@ public:
      * trigger() sollte von openFrameworks Events aufgerufen werden
      * Es dürfen hier keine draw-Operationen durchgeführt werden
      * (Kann auch leer implementiert werden)
+     * @param keycode
      */
-	virtual void trigger() = 0;
+	virtual void trigger(int key = 0) = 0;
 
     /**
      * Getter für den Vektor, in welchem alle verfügbaren Eingänge gespeichert sind

@@ -17,25 +17,10 @@ void testApp::setup(){
 
     BildBlock = new Ausgabeblock_Bild("Bildblock", 20, 20);
 
-//  ALTERNATIVE METHODE:
-//	const vector<Ausgang*> KameraBlockAusgaenge = KameraBlock->ausgaenge();
-//	const vector<Eingang*> BildBlockEingaenge = BildBlock->eingaenge();
-//	BildBlockEingaenge[Ausgabeblock_Bild::IMAGE]->verbinden(*KameraBlockAusgaenge[Eingangsblock_Kamera::IMAGE]);
+    //std::cout << "Verbindungen werden erstellt" << std::endl;
+    verbinden_0();
+	//std::cout << "Alle Verbindungen wurden erstellt" << std::endl;
 
-    std::cout << "Verbindungen werden erstellt" << std::endl;
-    SchnappschussBlock->eingaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
-    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
-    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::BACKGROUND_IMAGE]->verbinden(*SchnappschussBlock->ausgaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]);
-    BinarisierungsBlock->eingaenge()[Verarbeitungsblock_Binarisierung::IMAGE]->verbinden(*BildsubstraktorBlock->ausgaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]);
-
-    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
-    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::MASKEN_IMAGE]->verbinden(*BinarisierungsBlock->ausgaenge()[Verarbeitungsblock_Binarisierung::IMAGE]);
-    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::BACKGROUND_IMAGE]->verbinden(*HintergrundBlock->ausgaenge()[Eingangsblock_Bild::IMAGE]);
-
-	BildBlock->eingaenge()[Ausgabeblock_Bild::IMAGE]->verbinden(*HintergrundersetzerBlock->ausgaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]);
-	std::cout << "Alle Verbindungen wurden erstellt" << std::endl;
-
-//	std::cout << KameraBlock->text() << BildBlock->text() << std::endl;
 }
 
 //--------------------------------------------------------------
@@ -62,9 +47,23 @@ void testApp::keyPressed(int key){
         case ' ':
             SchnappschussBlock->trigger();
             break;
+        case '0':
+            verbinden_0();
+            break;
+        case '1':
+            verbinden_1();
+            break;
+        case 357:
+        case 359:
+            BinarisierungsBlock->trigger(key);
+            break;
+        case 356:
+        case 358:
+            HintergrundBlock->trigger(key);
+        default:
+            std::cout << "KeyPressed: " << key << std::endl;
     }
 
-    std::cout << "KeyPressed: " << key << std::endl;
 }
 
 //--------------------------------------------------------------
@@ -104,5 +103,23 @@ void testApp::gotMessage(ofMessage msg){
 
 //--------------------------------------------------------------
 void testApp::dragEvent(ofDragInfo dragInfo){
+
+}
+
+void testApp::verbinden_0(){
+    BildBlock->eingaenge()[Ausgabeblock_Bild::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+}
+void testApp::verbinden_1(){
+
+    SchnappschussBlock->eingaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::BACKGROUND_IMAGE]->verbinden(*SchnappschussBlock->ausgaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]);
+    BinarisierungsBlock->eingaenge()[Verarbeitungsblock_Binarisierung::IMAGE]->verbinden(*BildsubstraktorBlock->ausgaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]);
+
+    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::MASKEN_IMAGE]->verbinden(*BinarisierungsBlock->ausgaenge()[Verarbeitungsblock_Binarisierung::IMAGE]);
+    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::BACKGROUND_IMAGE]->verbinden(*HintergrundBlock->ausgaenge()[Eingangsblock_Bild::IMAGE]);
+
+	BildBlock->eingaenge()[Ausgabeblock_Bild::IMAGE]->verbinden(*HintergrundersetzerBlock->ausgaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]);
 
 }

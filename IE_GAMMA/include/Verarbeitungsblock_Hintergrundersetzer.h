@@ -67,7 +67,7 @@ class Verarbeitungsblock_Hintergrundersetzer : public Block
         void draw(){
             // nothing to do here
         }
-        void trigger(){
+        void trigger(int key = 0){
             // nothing to do here
         }
 

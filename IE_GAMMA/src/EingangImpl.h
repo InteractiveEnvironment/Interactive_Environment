@@ -106,7 +106,7 @@ public:
 		}
 		else
 		{
-		    std::cout << "Ausgang ist nullpointer" << std::endl;
+		    //std::cout << "Ausgang ist nullpointer" << std::endl;
 			return nullptr;
 		}
     }

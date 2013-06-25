@@ -1,5 +1,6 @@
 #ifndef EINGANGSBLOCK_BILD_H
 #define EINGANGSBLOCK_BILD_H
+#include <vector>
 
 #include <Block.h>
 #include "AusgangImpl.h"
@@ -20,21 +21,44 @@ class Eingangsblock_Bild : public Block
             int IMAGE_HEIGHT = 240;
             int IMAGE_WIDTH = 320;
 
+            bilderBibCounter = 0;
+
+            bilderBib.push_back("underwater.jpg");
+            bilderBib.push_back("forest.jpg");
+            bilderBib.push_back("moon.jpg");
+            bilderBib.push_back("mario.jpg");
+
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
-            image.loadImage("underwater.jpg");
+            image.loadImage(bilderBib[0]);
             a1->setzeDaten(&image);
         }
 
         void update()
         {
             //nothing to do here
-//            std::cout << this->name() << ": update()" << std::endl;
         }
         void draw(){
             // nothing to do here
         }
-        void trigger(){
-            // nothing to do here
+        void trigger(int key = 0){
+            switch(key){
+            case 356:
+                if(bilderBibCounter > 0){
+                    bilderBibCounter--;
+                }else{
+                    bilderBibCounter = bilderBib.size()-1;
+                }
+                break;
+            case 358:
+                if(bilderBibCounter < bilderBib.size()-1){
+                    bilderBibCounter++;
+                }else{
+                    bilderBibCounter = 0;
+                }
+                break;
+            }
+            image.loadImage(bilderBib[bilderBibCounter]);
+            std::cout << this->name() << " Bild Nr.: " << bilderBibCounter << " geladen" << std::endl;
         }
 
 
@@ -42,7 +66,8 @@ class Eingangsblock_Bild : public Block
     private:
         AusgangImpl<ofImage>* a1;
         ofImage image;
-
+        std::vector<string> bilderBib;
+        int bilderBibCounter;
 };
 
 #endif // EINGANGSBLOCK_BILD_H

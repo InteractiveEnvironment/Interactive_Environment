@@ -28,18 +28,17 @@ class Verarbeitungsblock_Schnappschuss : public Block
 
         void update()
         {
-//            std::cout << this->name() << ": update()" << std::endl;
             //nothing to do here
         }
         void draw()
         {
             //nothing to do here
         }
-        void trigger()
+        void trigger(int key = 0)
         {
-            std::cout << this->name() << ": trigger()" << std::endl;
-            image = *(e1->daten());
-//            a1->setzeDaten(&image);
+            if(e1->daten()!=nullptr){
+                image = *(e1->daten());
+            }
         }
 
     protected:
