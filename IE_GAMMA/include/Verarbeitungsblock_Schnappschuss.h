@@ -1,7 +1,7 @@
 #ifndef VERARBEITUNGSBLOCK_SCHNAPPSCHUSS_H
 #define VERARBEITUNGSBLOCK_SCHNAPPSCHUSS_H
 
-#include <Block.h>
+#include "Block.h"
 #include "EingangImpl.h"
 #include "AusgangImpl.h"
 

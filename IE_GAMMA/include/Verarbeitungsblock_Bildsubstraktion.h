@@ -1,7 +1,7 @@
 #ifndef VERARBEITUNGSBLOCK_BILDSUBSTRAKTION_H
 #define VERARBEITUNGSBLOCK_BILDSUBSTRAKTION_H
 
-#include <Block.h>
+#include "Block.h"
 #include "EingangImpl.h"
 #include "AusgangImpl.h"
 

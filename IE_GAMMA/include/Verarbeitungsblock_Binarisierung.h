@@ -1,7 +1,7 @@
 #ifndef VERARBEITUNGSBLOCK_BINARISIERUNG_H
 #define VERARBEITUNGSBLOCK_BINARISIERUNG_H
 
-#include <Block.h>
+#include "Block.h"
 
 
 class Verarbeitungsblock_Binarisierung : public Block

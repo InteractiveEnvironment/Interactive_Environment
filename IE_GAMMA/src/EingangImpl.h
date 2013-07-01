@@ -28,7 +28,11 @@ public:
 		ausgang = nullptr;
     }
 
-    //TODO: Destructor
+    virtual ~EingangImpl()
+    {
+        trennen();
+    }
+
 
     /**
      * Überprüft, ob ein Ausgang mit diesem Eingang kompatibel ist, also den gleichen Datentyp bereitstellt

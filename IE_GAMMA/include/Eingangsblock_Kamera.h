@@ -20,7 +20,7 @@ class Eingangsblock_Kamera : public Block
 
             int IMAGE_HEIGHT = 240;
             int IMAGE_WIDTH = 320;
-            vidGrabber.setVerbose(true);
+            //vidGrabber.setVerbose(true);
             vidGrabber.initGrabber(IMAGE_WIDTH,IMAGE_HEIGHT);
 
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);

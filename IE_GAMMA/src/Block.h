@@ -51,6 +51,7 @@ public:
 		    //TODO: trennen() im Destruktor des Eingangs aufrufen, anstatt hier:
 			e->trennen();
 			delete e;
+			std::cout << this->name() << " hat Eingang " << e->name() << " getrennt" <<std::endl;
 		}
 
         //Iteriert über alle Einträge im Vektor Ausgang
@@ -58,7 +59,10 @@ public:
 		{
 		    // Ruft den Destruktor, und damit trennen() im Ausgang auf
 			delete a;
+            std::cout << this->name() << " hat Ausgang " << a->name() << " getrennt" << std::endl;
 		}
+
+		std::cout << "Block " << this->name() << " wird gelöscht" << std::endl;
 	}
 
     /**
@@ -132,4 +136,16 @@ public:
 
 		return s.str();
 	}
+
+	//TODO: Methode verbinden() implementieren, damit man zum verbinden nicht immer die Ein- und Ausgänge abholen muss
+
+    void verbinde (int eingangsIndex, Block *block, int ausgangsIndex)
+    {
+       // *block = dynamic_cast <Block> *block;
+        std::cout << this->name() << " verbindet Eingang " << this->eingaenge()[eingangsIndex]->name() << " mit Ausgang " << block->ausgaenge()[ausgangsIndex]->name() << " von Block " << block->name() << std::endl;
+        this->eingaenge()[eingangsIndex]->verbinden(*block->ausgaenge()[ausgangsIndex]);
+
+    }
+
+
 };

@@ -33,6 +33,7 @@ class testApp : public ofBaseApp{
 		void verbinden_1();
 		void verbinden_2();
 		void verbinden_3();
+		void verbinden_4();
 
 		Eingangsblock_Kamera * KameraBlock;
 		Eingangsblock_Bild * HintergrundBlock;

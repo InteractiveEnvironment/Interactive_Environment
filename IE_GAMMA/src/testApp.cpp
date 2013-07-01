@@ -32,6 +32,7 @@ void testApp::update(){
     BinarisierungsBlock->update();
     HintergrundersetzerBlock->update();
     BildBlock->update();
+
 }
 
 //--------------------------------------------------------------
@@ -53,6 +54,15 @@ void testApp::keyPressed(int key){
         case '1':
             verbinden_1();
             break;
+        case '2':
+            verbinden_2();
+            break;
+        case '3':
+            verbinden_3();
+            break;
+        case '4':
+            verbinden_4();
+            break;
         case 357:
         case 359:
             BinarisierungsBlock->trigger(key);
@@ -64,6 +74,16 @@ void testApp::keyPressed(int key){
         case 'v':
         case 'V':
             KameraBlock->trigger(key);
+            break;
+        case 27:
+            std::cout << "exiting programm calling destructors" << std::endl;
+            delete KameraBlock;
+            delete HintergrundBlock;
+            delete SchnappschussBlock;
+            delete BildsubstraktorBlock;
+            delete BinarisierungsBlock;
+            delete HintergrundersetzerBlock;
+            delete BildBlock;
             break;
         default:
             std::cout << "KeyPressed: " << key << std::endl;
@@ -112,19 +132,42 @@ void testApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void testApp::verbinden_0(){
-    BildBlock->eingaenge()[Ausgabeblock_Bild::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+
+    //BildBlock->eingaenge()[Ausgabeblock_Bild::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
+    BildBlock->verbinde(Ausgabeblock_Bild::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
 }
 void testApp::verbinden_1(){
 
-    SchnappschussBlock->eingaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
-    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
-    BildsubstraktorBlock->eingaenge()[Verarbeitungsblock_Bildsubstraktion::BACKGROUND_IMAGE]->verbinden(*SchnappschussBlock->ausgaenge()[Verarbeitungsblock_Schnappschuss::IMAGE]);
-    BinarisierungsBlock->eingaenge()[Verarbeitungsblock_Binarisierung::IMAGE]->verbinden(*BildsubstraktorBlock->ausgaenge()[Verarbeitungsblock_Bildsubstraktion::IMAGE]);
+    SchnappschussBlock->verbinde(Verarbeitungsblock_Schnappschuss::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    BildBlock->verbinde(Ausgabeblock_Bild::IMAGE, SchnappschussBlock, Verarbeitungsblock_Schnappschuss::IMAGE);
+}
 
-    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]->verbinden(*KameraBlock->ausgaenge()[Eingangsblock_Kamera::IMAGE]);
-    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::MASKEN_IMAGE]->verbinden(*BinarisierungsBlock->ausgaenge()[Verarbeitungsblock_Binarisierung::IMAGE]);
-    HintergrundersetzerBlock->eingaenge()[Verarbeitungsblock_Hintergrundersetzer::BACKGROUND_IMAGE]->verbinden(*HintergrundBlock->ausgaenge()[Eingangsblock_Bild::IMAGE]);
+void testApp::verbinden_2(){
+    SchnappschussBlock->verbinde(Verarbeitungsblock_Schnappschuss::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    BildsubstraktorBlock->verbinde(Verarbeitungsblock_Bildsubstraktion::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    BildsubstraktorBlock->verbinde(Verarbeitungsblock_Bildsubstraktion::BACKGROUND_IMAGE, SchnappschussBlock, Verarbeitungsblock_Schnappschuss::IMAGE);
+    BildBlock->verbinde(Ausgabeblock_Bild::IMAGE, BildsubstraktorBlock, Verarbeitungsblock_Bildsubstraktion::IMAGE);
+}
 
-	BildBlock->eingaenge()[Ausgabeblock_Bild::IMAGE]->verbinden(*HintergrundersetzerBlock->ausgaenge()[Verarbeitungsblock_Hintergrundersetzer::IMAGE]);
+void testApp::verbinden_3(){
+    SchnappschussBlock->verbinde(Verarbeitungsblock_Schnappschuss::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    BildsubstraktorBlock->verbinde(Verarbeitungsblock_Bildsubstraktion::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    BildsubstraktorBlock->verbinde(Verarbeitungsblock_Bildsubstraktion::BACKGROUND_IMAGE, SchnappschussBlock, Verarbeitungsblock_Schnappschuss::IMAGE);
+    BinarisierungsBlock->verbinde(Verarbeitungsblock_Binarisierung::IMAGE, BildsubstraktorBlock, Verarbeitungsblock_Bildsubstraktion::IMAGE);
+    BildBlock->verbinde(Ausgabeblock_Bild::IMAGE, BinarisierungsBlock, Verarbeitungsblock_Binarisierung::IMAGE);
+}
+
+void testApp::verbinden_4(){
+
+    SchnappschussBlock->verbinde(Verarbeitungsblock_Schnappschuss::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    BildsubstraktorBlock->verbinde(Verarbeitungsblock_Bildsubstraktion::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    BildsubstraktorBlock->verbinde(Verarbeitungsblock_Bildsubstraktion::BACKGROUND_IMAGE, SchnappschussBlock, Verarbeitungsblock_Schnappschuss::IMAGE);
+    BinarisierungsBlock->verbinde(Verarbeitungsblock_Binarisierung::IMAGE, BildsubstraktorBlock, Verarbeitungsblock_Bildsubstraktion::IMAGE);
+
+    HintergrundersetzerBlock->verbinde(Verarbeitungsblock_Hintergrundersetzer::IMAGE, KameraBlock, Eingangsblock_Kamera::IMAGE);
+    HintergrundersetzerBlock->verbinde(Verarbeitungsblock_Hintergrundersetzer::MASKEN_IMAGE, BinarisierungsBlock, Verarbeitungsblock_Binarisierung::IMAGE);
+    HintergrundersetzerBlock->verbinde(Verarbeitungsblock_Hintergrundersetzer::BACKGROUND_IMAGE, HintergrundBlock, Eingangsblock_Bild::IMAGE);
+
+	BildBlock->verbinde(Ausgabeblock_Bild::IMAGE, HintergrundersetzerBlock, Verarbeitungsblock_Hintergrundersetzer::IMAGE);
 
 }
