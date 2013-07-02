@@ -25,20 +25,15 @@ class Verarbeitungsblock_Bildsubstraktion : public Block
             int IMAGE_WIDTH = 320;
 
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
-//            image_e1->allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
-//            image_e2->allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
             a1->setzeDaten(&image);
         }
 
         void update()
         {
-//            std::cout << this->name() << ": update() start" << std::endl;
             image_e1 = e1->daten();
             image_e2 = e2->daten();
-//            std::cout << this->name() << ": update() imageadressen kopiert" << std::endl;
 
             if((e1->daten()!=nullptr) && (e2->daten()!=nullptr)){
-//                std::cout << "Bildsubstraktion: true" << std::endl;
                 for(int s=0; s<image.getPixelsRef().size(); s++){
                     image.getPixelsRef()[s] = std::abs( image_e1->getPixelsRef()[s] - image_e2->getPixelsRef()[s] );
                 }

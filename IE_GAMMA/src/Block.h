@@ -48,8 +48,6 @@ public:
 	    // Iteriert über alle Einträge im Vektor Eingang
 		for(Eingang* e : eingang)
 		{
-		    //TODO: trennen() im Destruktor des Eingangs aufrufen, anstatt hier:
-			e->trennen();
 			delete e;
 			std::cout << this->name() << " hat Eingang " << e->name() << " getrennt" <<std::endl;
 		}
@@ -137,11 +135,14 @@ public:
 		return s.str();
 	}
 
-	//TODO: Methode verbinden() implementieren, damit man zum verbinden nicht immer die Ein- und Ausgänge abholen muss
-
+	/**
+	 * Verbindet einen Eingang dieses Blockes mit einem Ausgang eines Blockes
+	 * @param eingangsIndex Index des Eingangs in der Liste der Eingänge des Blockes (enum) //TODO: besser bezeichnen!
+	 * @param block Der Pointer auf den Block mit dessen Ausgang verbunden wird
+	 * @param ausgangsIndex Index des Ausgang in der Liste der Ausgänge des Blockes, mit dem verbunden wird //TODO: besser bezeichnen!
+	 */
     void verbinde (int eingangsIndex, Block *block, int ausgangsIndex)
     {
-       // *block = dynamic_cast <Block> *block;
         std::cout << this->name() << " verbindet Eingang " << this->eingaenge()[eingangsIndex]->name() << " mit Ausgang " << block->ausgaenge()[ausgangsIndex]->name() << " von Block " << block->name() << std::endl;
         this->eingaenge()[eingangsIndex]->verbinden(*block->ausgaenge()[ausgangsIndex]);
 

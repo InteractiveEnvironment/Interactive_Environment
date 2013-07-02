@@ -1,6 +1,5 @@
 #pragma once
 #include "Ausgang.h"
-//#include "Eingang.h"
 #include "PortImpl.h"
 #include <algorithm>
 #include <sstream>

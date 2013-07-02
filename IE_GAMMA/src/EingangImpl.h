@@ -67,13 +67,12 @@ public:
      */
     virtual void verbinden(Ausgang& _ausgang)
     {
-        //TODO: Überprüfung durch istKompatibel() ersetzen!
-        AusgangImpl<T>* a = dynamic_cast<AusgangImpl<T>* > (&_ausgang);
-        if(a!=nullptr)
+        if(istKompatibel(_ausgang))
         {
-            //TODO: Folgenden Code durch verbinden() ersetzen
-            this->ausgang = a;
-            a->verbinden(this);
+             AusgangImpl<T>* a = dynamic_cast<AusgangImpl<T>* > (&_ausgang);
+
+            //ruft Funktion verbinden(AusgangImpl<T>& _ausgang) auf
+            verbinden(*a);
         }
     }
 
