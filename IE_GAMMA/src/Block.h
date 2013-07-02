@@ -45,22 +45,26 @@ public:
 
 	virtual ~Block()
 	{
+	    std::cout << "Destruktor von Block " << this->name() << " wird aufgerufen" << std::endl;
 	    // Iteriert über alle Einträge im Vektor Eingang
 		for(Eingang* e : eingang)
 		{
+		    //std::cout << this->name() << " wird Eingang " << e->name() << " löschen" << std::endl;
 			delete e;
-			std::cout << this->name() << " hat Eingang " << e->name() << " getrennt" <<std::endl;
+			//std::cout << this->name() << " hat Eingang " << e->name() << " gelöscht" <<std::endl;
 		}
 
         //Iteriert über alle Einträge im Vektor Ausgang
 		for(Ausgang* a : ausgang)
 		{
+		     //std::cout << this->name() << " wird Ausgang " << a->name() << " löschen" << std::endl;
 		    // Ruft den Destruktor, und damit trennen() im Ausgang auf
 			delete a;
-            std::cout << this->name() << " hat Ausgang " << a->name() << " getrennt" << std::endl;
+            //std::cout << this->name() << " hat Ausgang " << a->name() << " gelöscht" << std::endl;
+
 		}
 
-		std::cout << "Block " << this->name() << " wird gelöscht" << std::endl;
+		//std::cout << "Block " << this->name() << " wird gelöscht" << std::endl;
 	}
 
     /**

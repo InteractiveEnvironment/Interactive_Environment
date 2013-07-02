@@ -35,6 +35,8 @@ class testApp : public ofBaseApp{
 		void verbinden_3();
 		void verbinden_4();
 
+		void exit();
+
 		Eingangsblock_Kamera * KameraBlock;
 		Eingangsblock_Bild * HintergrundBlock;
 		Verarbeitungsblock_Schnappschuss * SchnappschussBlock;
@@ -44,5 +46,7 @@ class testApp : public ofBaseApp{
 		Ausgabeblock_Bild* BildBlock;
 		Ausgabeblock_Bild* BildBlock_2;
 		Ausgabeblock_Bild* BildBlock_3;
+
+		bool isRunning;
 
 };

@@ -30,7 +30,8 @@ public:
 
     virtual ~EingangImpl()
     {
-        trennen();
+        std::cout << "Destruktor von Eingang " << this->name() << " wird aufgerufen" << std::endl;
+        this->trennen();
     }
 
 
@@ -84,8 +85,12 @@ public:
     {
         if(ausgang!=nullptr)
         {
+           //std::cout << "Ausgang != Nullpointer" << std::endl;
+            std::cout << "Eingang " << this->name() << " trennt Ausgang " << ausgang->name() << std::endl;
             ausgang->trennen(this);
             ausgang = nullptr;
+        } else {
+            std::cout << "Muss Ausgang nicht trennen, da Nullpointer" << std::endl;
         }
 	}
     /**

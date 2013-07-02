@@ -39,10 +39,13 @@ public:
      */
 	virtual ~AusgangImpl()
 	{
+	     std::cout << "Destruktor von Ausgang " << this->name() << " wird aufgerufen" << std::endl;
 	    // Iteriert über jeden im Eingangsvektor gespeicherten Eintrag
 	    for(Eingang* e : eingaenge)
 	    {
+	        //std::cout << "Eingang " << e->name() << "wird sich von Ausgang " << this->name() << " trennen" << std::endl;
 	        e->trennen();
+            //std::cout << "Eingang " << e->name() << "hat sich von Ausgang " << this->name() << " getrennt" << std::endl;
 	    }
 	}
 
@@ -82,6 +85,7 @@ public:
 	    if (it != eingaenge.end())
 	    {
             eingaenge.erase(it);
+            //std::cout << "Ausgang " << this->name() << " hat Eingang " << e->name() << " aus der Liste gelöscht" << std::endl;
 	    }
 	}
 

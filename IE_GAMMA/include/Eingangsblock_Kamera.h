@@ -18,8 +18,8 @@ class Eingangsblock_Kamera : public Block
             this->ausgangHinzufuegen(a1);
 
 
-            int IMAGE_HEIGHT = 240;
-            int IMAGE_WIDTH = 320;
+            int IMAGE_HEIGHT = 480;
+            int IMAGE_WIDTH = 640;
             //vidGrabber.setVerbose(true);
             vidGrabber.initGrabber(IMAGE_WIDTH,IMAGE_HEIGHT);
 

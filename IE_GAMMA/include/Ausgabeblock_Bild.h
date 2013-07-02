@@ -23,8 +23,8 @@ class Ausgabeblock_Bild : public Block
             xPos = _xPos;
             yPos = _yPos;
 
-            int IMAGE_HEIGHT = 240;
-            int IMAGE_WIDTH = 320;
+            int IMAGE_HEIGHT = 480;
+            int IMAGE_WIDTH = 640;
         }
 
         void update()

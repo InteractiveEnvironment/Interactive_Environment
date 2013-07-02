@@ -15,30 +15,35 @@ void testApp::setup(){
     BinarisierungsBlock = new Verarbeitungsblock_Binarisierung("BinarisierungsBlock");
     HintergrundersetzerBlock = new Verarbeitungsblock_Hintergrundersetzer("HintergrundersetzerBlock");
 
-    BildBlock = new Ausgabeblock_Bild("Bildblock", 20, 20);
+    BildBlock = new Ausgabeblock_Bild("Bildblock", 0, 0);
 
     //std::cout << "Verbindungen werden erstellt" << std::endl;
     verbinden_0();
 	//std::cout << "Alle Verbindungen wurden erstellt" << std::endl;
+	isRunning = true;
 
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
 
-    KameraBlock->update();
-    SchnappschussBlock->update();
-    BildsubstraktorBlock->update();
-    BinarisierungsBlock->update();
-    HintergrundersetzerBlock->update();
-    BildBlock->update();
+    if (isRunning){
+        KameraBlock->update();
+        SchnappschussBlock->update();
+        BildsubstraktorBlock->update();
+        BinarisierungsBlock->update();
+        HintergrundersetzerBlock->update();
+        BildBlock->update();
+    }
 
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
 
-    BildBlock->draw();
+    if (isRunning){
+        BildBlock->draw();
+    }
 }
 
 //--------------------------------------------------------------
@@ -74,16 +79,6 @@ void testApp::keyPressed(int key){
         case 'v':
         case 'V':
             KameraBlock->trigger(key);
-            break;
-        case 27:
-            std::cout << "exiting programm calling destructors" << std::endl;
-            delete KameraBlock;
-            delete HintergrundBlock;
-            delete SchnappschussBlock;
-            delete BildsubstraktorBlock;
-            delete BinarisierungsBlock;
-            delete HintergrundersetzerBlock;
-            delete BildBlock;
             break;
         default:
             std::cout << "KeyPressed: " << key << std::endl;
@@ -170,4 +165,16 @@ void testApp::verbinden_4(){
 
 	BildBlock->verbinde(Ausgabeblock_Bild::IMAGE, HintergrundersetzerBlock, Verarbeitungsblock_Hintergrundersetzer::IMAGE);
 
+}
+
+void testApp::exit(){
+    isRunning = false;
+    std::cout << "exiting programm calling destructors" << std::endl;
+    delete BildsubstraktorBlock;
+    delete KameraBlock;
+    delete HintergrundBlock;
+    delete SchnappschussBlock;
+    delete BinarisierungsBlock;
+    delete HintergrundersetzerBlock;
+    delete BildBlock;
 }

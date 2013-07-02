@@ -17,8 +17,8 @@ class Verarbeitungsblock_Binarisierung : public Block
             e1 = new EingangImpl<ofImage>("e1");
             this->eingangHinzufuegen(e1);
 
-            int IMAGE_HEIGHT = 240;
-            int IMAGE_WIDTH = 320;
+            int IMAGE_HEIGHT = 480;
+            int IMAGE_WIDTH = 640;
 
             schwellwert = 35;
 

@@ -28,8 +28,8 @@ class Verarbeitungsblock_Hintergrundersetzer : public Block
             this->ausgangHinzufuegen(a1);
 
             //TODO: Dynamisch Größe anpassen
-            int IMAGE_HEIGHT = 240;
-            int IMAGE_WIDTH = 320;
+            int IMAGE_HEIGHT = 480;
+            int IMAGE_WIDTH = 640;
 
             //jedes konkrete ofImage muss mit allocate Speicher reservieren, bevor es verwendet werden kann
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);

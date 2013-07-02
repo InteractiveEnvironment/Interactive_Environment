@@ -19,8 +19,8 @@ class Verarbeitungsblock_Schnappschuss : public Block
             e1 = new EingangImpl<ofImage>("e1");
             this->eingangHinzufuegen(e1);
 
-            int IMAGE_HEIGHT = 240;
-            int IMAGE_WIDTH = 320;
+            int IMAGE_HEIGHT = 480;
+            int IMAGE_WIDTH = 640;
 
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
             a1->setzeDaten(&image);

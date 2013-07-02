@@ -18,15 +18,17 @@ class Eingangsblock_Bild : public Block
             this->ausgangHinzufuegen(a1);
 
 
-            int IMAGE_HEIGHT = 240;
-            int IMAGE_WIDTH = 320;
+            int IMAGE_HEIGHT = 480;
+            int IMAGE_WIDTH = 640;
 
             bilderBibCounter = 0;
 
-            bilderBib.push_back("underwater.jpg");
-            bilderBib.push_back("forest.jpg");
-            bilderBib.push_back("moon.jpg");
-            bilderBib.push_back("mario.jpg");
+            bilderBib.push_back("640x480/underwater.jpg");
+            bilderBib.push_back("640x480/forest.jpg");
+            bilderBib.push_back("640x480/moon.jpg");
+            bilderBib.push_back("640x480/mario.jpg");
+            bilderBib.push_back("640x480/party.jpg");
+            bilderBib.push_back("640x480/underwater_2.jpg");
 
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
             image.loadImage(bilderBib[0]);
