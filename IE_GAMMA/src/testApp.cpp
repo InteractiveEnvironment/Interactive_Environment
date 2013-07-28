@@ -6,6 +6,7 @@
 void testApp::setup(){
 
     ofSetFrameRate(25);
+    //ofSetLogLevel(OF_LOG_SILENT); //DEAKTIVIERT ofLog !!
 
     KameraBlock = new Eingangsblock_Kamera("KameraBlock");
     HintergrundBlock = new Eingangsblock_Bild("HintergrundBlock");
@@ -81,7 +82,8 @@ void testApp::keyPressed(int key){
             KameraBlock->trigger(key);
             break;
         default:
-            std::cout << "KeyPressed: " << key << std::endl;
+            //std::cout << "KeyPressed: " << key << std::endl;
+            break;
     }
 
 }
@@ -170,7 +172,7 @@ void testApp::verbinden_4(){
 void testApp::exit(){
     isRunning = false;
     std::cout << "exiting programm calling destructors" << std::endl;
-    delete BildsubstraktorBlock;
+    //delete BildsubstraktorBlock;
     delete KameraBlock;
     delete HintergrundBlock;
     delete SchnappschussBlock;

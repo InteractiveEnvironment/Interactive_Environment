@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1372156680 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\main.cpp
+1373385478 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\main.cpp
 	"ofMain.h"
 	"testApp.h"
 	"ofAppGlutWindow.h"
@@ -1132,7 +1132,7 @@
 	"ofCamera.h"
 	"ofEvents.h"
 
-1372156401 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.h
+1373385478 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.h
 	"ofMain.h"
 	"Ausgang.h"
 	"Eingang.h"
@@ -1164,20 +1164,20 @@
 1372147935 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\eingang.h
 	"Port.h"
 
-1372168189 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\eingangsblock_kamera.h
+1375030442 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\eingangsblock_kamera.h
 	"Block.h"
 	"AusgangImpl.h"
 
-1372157575 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\ausgabeblock_bild.h
+1375030046 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\ausgabeblock_bild.h
 	"Block.h"
 	"EingangImpl.h"
 
-1372157634 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\block.h
+1373385478 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\block.h
 	<vector>
 	"Ausgang.h"
 	"Eingang.h"
 
-1372153008 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\ausgangimpl.h
+1373385478 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\ausgangimpl.h
 	"Ausgang.h"
 	"PortImpl.h"
 	<algorithm>
@@ -1188,34 +1188,34 @@
 	"Port.h"
 	<typeinfo>
 
-1372156348 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\eingangimpl.h
+1373385478 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\eingangimpl.h
 	"Eingang.h"
 	"AusgangImpl.h"
 	<sstream>
 
-1372159176 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.cpp
+1375032255 source:d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\src\testapp.cpp
 	"testApp.h"
 
-1372159414 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\eingangsblock_bild.h
+1375047479 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\eingangsblock_bild.h
 	<vector>
-	<Block.h>
+	"Block.h"
 	"AusgangImpl.h"
 
-1372157565 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_schnappschuss.h
-	<Block.h>
+1373385478 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_schnappschuss.h
+	"Block.h"
 	"EingangImpl.h"
 	"AusgangImpl.h"
 
-1372157608 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_bildsubstraktion.h
-	<Block.h>
+1373385478 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_bildsubstraktion.h
+	"Block.h"
 	"EingangImpl.h"
 	"AusgangImpl.h"
 
-1372157988 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_binarisierung.h
-	<Block.h>
+1373385478 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_binarisierung.h
+	"Block.h"
 
-1372157555 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_hintergrundersetzer.h
-	<Block.h>
+1375029913 d:\workspace\openframeworks\of_v0.7.4_win_cb_release\apps\interactive_environment\ie_gamma\include\verarbeitungsblock_hintergrundersetzer.h
+	"Block.h"
 	"EingangImpl.h"
 	"AusgangImpl.h"
 

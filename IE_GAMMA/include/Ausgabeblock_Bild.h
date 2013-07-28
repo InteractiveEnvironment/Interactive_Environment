@@ -36,7 +36,7 @@ class Ausgabeblock_Bild : public Block
             }
             else
             {
-                std::cout << this->name() << ": Image = nullptr" << std::endl;
+                //std::cout << this->name() << ": Image = nullptr" << std::endl;
             }
         }
         void draw()

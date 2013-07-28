@@ -23,12 +23,13 @@ class Eingangsblock_Bild : public Block
 
             bilderBibCounter = 0;
 
+            bilderBib.push_back("640x480/moon.jpg");
             bilderBib.push_back("640x480/underwater.jpg");
             bilderBib.push_back("640x480/forest.jpg");
-            bilderBib.push_back("640x480/moon.jpg");
+//            bilderBib.push_back("640x480/underwater_2.jpg");
             bilderBib.push_back("640x480/mario.jpg");
-            bilderBib.push_back("640x480/party.jpg");
-            bilderBib.push_back("640x480/underwater_2.jpg");
+//            bilderBib.push_back("640x480/party.jpg");
+
 
             image.allocate(IMAGE_WIDTH,IMAGE_HEIGHT,OF_IMAGE_COLOR);
             image.loadImage(bilderBib[0]);
